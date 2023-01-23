@@ -1,5 +1,7 @@
 .container {
-  padding: 0 20px;
-  margin: 0 auto;
-  max-width: 1220px;
+	// padding: 0 20px;
+	// margin: 0 auto;
+	// max-width: 1000px;
+	@include margin-desktop-pad(220,60);
+	@include margin-pad-mobile(60,20);
 }
