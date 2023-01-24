@@ -121,7 +121,7 @@ let rand = Math.floor(1 + Math.random() * 10);
 console.log(rand);
 let userAnswer = prompt('Угадай число от 1 до 10', 1);
 console.log(userAnswer);
-if (userAnswer == rand) {
+if (userAnswer === rand) {
 	console.log('Верно!!! Вы победили!!!');
 	alert('Верно!!! Вы победили!!!');
 } else {
