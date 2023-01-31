@@ -1,58 +1,47 @@
 //№1
 //Создать программу, которая запрашивает у пользователя число, в консоль выводит числа от 1 до до этого числа, но пропускает числа, которые кратны (делятся без остатка) 4-м.
 
-//Предполагаю 2 варианта решения
-// Вариант рещения 1 - в случае если мы введем число - получим резултат согласно ТЗ, в случае если введем НЕ число, а символ или буквы - получим сообщение об ошибке, в этом варианте проверка происходит сразу
-
-console.log('Задача 1');
-let userNumber = prompt('Введите число от 1', 0); 
-let i = 0;
-if (userNumber > 0) { 
-	while (i < userNumber) {
-		i++;
-		if (i % 4 === 0) {
-			continue;
-		} else if (i % 4 !== 0) {
-			console.log(i);
-		}
-	}
-} else {
-	alert('Ошибка! Некорректные данные!');
-	console.log('Ошибка! Некорректные данные!');
-}
-
 //Так как нужно вывести числа от 1 сразу прибавим к i + 1
 //Если число кратно 4 то continue прерывает текущую итерацию и начинает следующую
 //Если число НЕ кратно 4 (а это все остальные случаи когда мы введем ЧИСЛО) - выводим на экран i
-//Если введем бузквы или символы как раз и сработает else и скажет что у нас ошибка
 
-
-//Вариант решения второй, так как 4 задача - это и есть проверка 1-3 задач на правильность введенных данных, оставлю здесь решение без условий
-
-console.log('\nЗадача 1 вариант 2');
+console.log('Задача 1');
+//
 let enterNumber = prompt('Введите число от 1', 0); 
-let iter = 0;
-	while (iter < enterNumber) {
-		iter++;
-		if (iter % 4 === 0) {
-			continue;
-		} else if (iter % 4 !== 0) {
-			console.log(iter);
-		}
-	}
+enterNumber = +enterNumber;
+let i = 0;
+while (i < enterNumber) {
+	i++;
+	if (i % 4 === 0) {
+		continue;
+	} 
+	console.log(i);
+}
 
 
 //2
 //Написать программу, которая будет получать число и с помощью цикла while считать его факториал.
 
 console.log('\nЗадача 2');
+//
 let usNumber = prompt('Введите число', 0);
+usNumber = +usNumber;
 let count = usNumber - 1; //чтобы каждый раз умнодать число на себя же но - 1, от этого же и будет зависеть количество итераций
 while (count > 0) {
 	usNumber = usNumber * count;
 	count--;
 }
 console.log(usNumber);
+
+//Вариант выполнения функцией
+// function factorial(number) {
+// 	if (number < 2) {
+// 		return 1;
+// 		} else {
+// 		return number * factorial(number - 1);
+// 	}
+// }
+// console.log(factorial(5));
 
 
 
@@ -61,7 +50,9 @@ console.log(usNumber);
 
 console.log('\nЗадача 3');
 let number = prompt('Введите число', 1);
+number = +number;
 let degree = prompt('Введите степень', 1);
+degree = +degree;
 let result = 1;
 for (let i = 0; i < degree; i++) { //счетчик итераций равен 1, цикл работает пока счетчик итераций меньше чем степень в которую нужно возвести число, каждую итерацию прибавляем к счетчику + 1
 	// console.log(result = result * number); //так можем отследить что происходит но закомментировав следующую строку
@@ -74,32 +65,51 @@ console.log(`${number} в ${degree} степени = ${result}`);
 console.log('\nПроверка задач');
 
 //проверка 1 задачи
-if (userNumber > 0) {
-	console.log('ЗАДАЧА1: Ошибок нет :)')
-} else if (userNumber == 0) {
-	console.log('ЗАДАЧА1: Ошибка! Введен 0');
-} else if (userNumber < 0) {
-	console.log('ЗАДАЧА1: Ошибка! Введено число меньше 0');
-} else {
+// if (+enterNumber) {
+// 	console.log('ЗАДАЧА1: Ошибок нет :)')
+// } else if (enterNumber === 0) {
+// 	console.log('ЗАДАЧА1: Ошибка! Введен 0');
+// } else if (enterNumber < 0) {
+// 	console.log('ЗАДАЧА1: Ошибка! Введено число меньше 0');
+// } else {
+// 	console.log('ЗАДАЧА1: Ошибка! Введены неверные данные!');
+// }
+switch (true) {
+	case enterNumber === 0:
+		console.log('ЗАДАЧА1: Ошибка! Введен 0');
+		break
+	case enterNumber < 0:
+		console.log('ЗАДАЧА1: Ошибка! Введено отрицательное число');
+		break
+	case enterNumber > 0:
+		console.log('ЗАДАЧА1: Ошибок нет');
+		break
+	default:
 	console.log('ЗАДАЧА1: Ошибка! Введены неверные данные!');
-}
-//проверка задачи 1_2
-if (enterNumber > 0) {
-	console.log('ЗАДАЧА 1_2: Ошибок нет :)')
-} else {
-	console.log('ЗАДАЧА1_2: Ошибка! Введены неверные данные!');
+	break
 }
 
 //проверка 2 задачи
-if (usNumber > 0) {
-	console.log('ЗАДАЧА 2: Ошибок нет :)')
-} else {
+// if (+usNumber) {
+// 	console.log('ЗАДАЧА 2: Ошибок нет')
+// } else {
+// 	console.log('ЗАДАЧА2: Ошибка! Введены неверные данные!');
+// }
+switch (true) {
+	case usNumber > 0:
+		console.log('ЗАДАЧА 2: Ошибок нет');
+		break
+	case usNumber < 0:
+		console.log('ЗАДАЧА 2:Факториал отрицательного числа не существует');
+		break
+	default:
 	console.log('ЗАДАЧА2: Ошибка! Введены неверные данные!');
+	break
 }
 
 //проверка 3 задачи
-if (number > 0 || number == 0 || number < 0) {
-	console.log('ЗАДАЧА 3: Ошибок нет :)')
+if (+number && +degree) {
+	console.log('ЗАДАЧА 3: Ошибок нет')
 } else {
 	console.log('ЗАДАЧА3: Ошибка! Введены неверные данные!');
 }
@@ -117,10 +127,11 @@ if (number > 0 || number == 0 || number < 0) {
 //таким образом получаем целое число от 1 до 10 - включая 10
 
 console.log('\nИгра \“Угадай число\”');
+
 let rand = Math.floor(1 + Math.random() * 10);
 console.log(rand);
 let userAnswer = prompt('Угадай число от 1 до 10', 1);
-console.log(userAnswer);
+userAnswer = +userAnswer;
 if (userAnswer === rand) {
 	console.log('Верно!!! Вы победили!!!');
 	alert('Верно!!! Вы победили!!!');

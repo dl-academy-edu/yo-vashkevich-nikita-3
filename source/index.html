@@ -34,12 +34,97 @@
             </ul>
           </nav>
         </div>
+        <div class="burger">
+          <nav class="burger__nav">
+            <ul class="burger__list">
+              <li class="burger__list-item"><a href="#"></a></li>
+              <li class="burger__list-item"><a href="#"></a></li>
+              <li class="burger__list-item"><a href="#"></a></li>
+              <li class="burger__list-item"><a href="#"></a></li>
+            </ul>
+          </nav>
+        </div>
       </header>
       <main class="content">
+        <section class="section section-slider">
+          <div class="container container-slider">
+            <div class="content">
+              @@include('blocks/title.html', {
+                "text": "Antonina Antoninovna",
+                "class": "content__title",
+              })
+              <div class="content__inner">
+                <p class="content__bio">Future front-end developer 23 years old, Tolyatti</p>
+                <div class="burger__button-open">
+                  <div class="line-one"></div>
+                  <div class="line-two"></div>
+                  <div class="line-three"></div>
+                </div>
+              </div>
+            </div>
+            <div class="slider" id="main-slider"><!-- самый внешний контейнер -->
+              <ul class="slider-wrapper"><!-- внутренний враппер -->
+                <li class="slide" id="slide-1">
+                  <picture class="slide__picture">
+                    <img class="slide__img" src="./img/image/photo-one.jpg" width="1000" height="1497" alt="woman">
+                  </picture>
+                </li>
+                <!-- <li class="slide" id="slide-2">
+                  <picture class="slide__picture">
+                    <img class="slide__img" src="./img/image/photo-two.jpg" width="1000" height="1497" alt="woman">
+                  </picture>
+                </li>
+                <li class="slide" id="slide-3">
+                  <picture class="slide__picture">
+                    <img class="slide__img" src="./img/image/photo-three.jpg" width="1000" height="1497" alt="woman">
+                  </picture>
+                </li>
+                <li class="slide" id="slide-4">
+                  <picture class="slide__picture">
+                    <img class="slide__img" src="./img/image/photo-four.jpg" width="1000" height="1497" alt="code">
+                  </picture>
+                </li> -->
+            </ul>
+              <div class="slider-nav">
+                <button class="slider-nav__previous" type="button">
+                  <svg class="slider-nav__previous-arrow" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="40.75" y="40.75" width="39.5" height="39.5" rx="19.75" transform="rotate(-180 40.75 40.75)" stroke="#070707" stroke-width="2.5"/>
+                    <rect x="24.5791" y="32.6992" width="16.5512" height="3" rx="1.5" transform="rotate(-135 24.5791 32.6992)" fill="#070707"/>
+                    <rect x="26.7002" y="11.4199" width="16.5512" height="3" rx="1.5" transform="rotate(135 26.7002 11.4199)" fill="#070707"/>
+                    </svg>                
+                </button>
+                <div class="slider-pagination">
+                  <button class="slider-pagination__button" type="button"></button>
+                  <buтtton class="slider-pagination__button" type="button"></buтtton>
+                  <button class="slider-pagination__button" type="button"></button>
+                  <button class="slider-pagination__button" type="button"></button>
+                </div>
+                <button class="slider-nav__next" type="button">
+                  <svg class="slider-nav__next-arrow" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1.25" y="1.25006" width="39.5" height="39.5" rx="19.75" stroke="#070707" stroke-width="2.5"/>
+                    <rect x="17.4209" y="9.30084" width="16.5512" height="3" rx="1.5" transform="rotate(45 17.4209 9.30084)" fill="#070707"/>
+                    <rect x="15.2998" y="30.5801" width="16.5512" height="3" rx="1.5" transform="rotate(-45 15.2998 30.5801)" fill="#070707"/>
+                    </svg>                
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section section-about">
+          <div class="container container-about">
+            <div class="content">
+              <h2 class="content__title">About me</h2>
+              <div class="content__text">
+                <p class="content__text-one">Aliquam tortor molestie turpis est tristique. Congue diam orci amet quis semper ut. Vitae aenean nibh facilisis urna, ultricies euismod nunc. Commodo fringilla sit hendrerit consequat. Vel ac elit vel sagittis.</p>
+                <p class="content__text-two">Tincidunt id quis pellentesque rutrum pretium. Egestas aliquam dictum ipsum nisl, sed pulvinar. Commodo elit sed a fermentum non justo. Etiam platea consectetur.</p>
+                <p class="content__text-three">Quam ipsum odio tellus etiam aliquam dolor ut hendrerit. Felis risus nec vitae nunc ultricies placerat. Nullam nec felis eu id dolor pellentesque tristique. </p>  
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       @@include('blocks/footer.html')
     </div>
-
     <script src="js/app.js" defer></script>
   </body>
 </html>

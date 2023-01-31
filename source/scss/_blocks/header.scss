@@ -1,138 +1,95 @@
-.header {
-	.header-container {
+// .header {
+// 	.header-container {
 
-		.header-list {
-			display: flex;
-			gap: 20px;
-			padding: 33px 10px;
-			border-bottom: $color-gray 1px solid;
-			@media (max-width: 900px) {
-				padding: 35px 0px 31px 0px;
-			}
-			@media (max-width: 645px) {
-				display: none;
-			}
+// 		.header-list {
+// 			display: flex;
+// 			gap: 20px;
+// 			padding: 33px 10px;
+// 			border-bottom: $color-gray 1px solid;
+// 			@media (max-width: 900px) {
+// 				padding: 35px 0px 31px 0px;
+// 			}
+// 			@media (max-width: 645px) {
+// 				display: none;
+// 			}
 
-			.item-home {
-				margin-right: auto;
-			}
+// 			.item-home {
+// 				margin-right: auto;
+// 			}
 
-			&__link {
-				font-family: $font-gilroy;
-				font-style: normal;
-				font-weight: 400;
-				font-size: 18px;
-				line-height: 22px;
-				color: $color-gray;
-			}
-			&__link:hover {
-				color: $color-black;
-			}
-			.link-focus {
-				font-weight: 700;
-				color: $color-black;
-			}
-		}
-		.header-content {
-			display: flex;
-			gap: 40px;
-			padding-top: 40px;
-			@media (max-width: 645px) {
-				flex-direction: column;
-				gap: 20.22;
-			}
-			@media (max-width: 319px) {
-				gap: 15px;
-			}
-			@media (max-width: 265px) {
-				gap: 5px;
-			}
-			
-
-			&__title {
-				max-width: 260px;
-				@media (max-width: 319px) {
-					font-size: 40px;
-				}
-				@media (max-width: 265px) {
-					font-size: 30px;
-				}
-			}
-			&__bio {
-				font-family: $font-gilroy;
-				font-style: normal;
-				font-weight: 400;
-				font-size: 18px;
-				line-height: 21px;
-				color: $color-black;
-				max-width: 226px;
-				margin-top: 63px;
-				@media (max-width: 645px) {
-					margin-top: 0px;
-					margin-right: auto;
-				}
-			}
-			&__block {
-				display: flex;
-			}
-		}
-	}
-	.burger {
-		&__button-open {
-			display: none;
-			flex-direction: column;
-			gap: 4px;
-			padding-top: 9px;
-			padding-left: 10px;
-			@media (max-width: 645px) {
-				display: flex;
-			}
-			.line-one {
-				width: 32px;
-				height: 4px;
-				background-color: #070707;
-				border-radius: 15px;
-			}
-			.line-two {
-				width: 32px;
-				height: 4px;
-				background-color: #070707;
-				border-radius: 15px;
-			}
-			.line-three {
-				width: 32px;
-				height: 4px;
-				background-color: #070707;
-				border-radius: 15px;
-			}
-		}
-		&__button-close {
-			width: 32px;
-			height: 20px;
-			display: flex;
-			flex-direction: column;
-			gap: 12px;
-			.line-one {
-				width: 32px;
-				height: 4px;
-				background-color: #070707;
-				border-radius: 15px;
-				transform: translateY(6px) rotate(45deg);
-			}
-			.line-two {
-				display: none;
-				width: 32px;
-				height: 4px;
-				background-color: #070707;
-				border-radius: 15px;
-			}
-			.line-three {
-				width: 32px;
-				height: 4px;
-				background-color: #070707;
-				border-radius: 15px;
-				transform: translateY(-10px) rotate(-45deg);
-			}
-		}
-	}
-}
+// 			&__link {
+// 				font-family: $font-gilroy;
+// 				font-style: normal;
+// 				font-weight: 400;
+// 				font-size: 18px;
+// 				line-height: 22px;
+// 				color: $color-gray;
+// 			}
+// 			&__link:hover {
+// 				color: $color-black;
+// 			}
+// 			.link-focus {
+// 				font-weight: 700;
+// 				color: $color-black;
+// 			}
+// 		}
+// 	}
+// 	.burger {
+// 		&__button-open {
+// 			display: none;
+// 			flex-direction: column;
+// 			gap: 4px;
+// 			padding-top: 9px;
+// 			padding-left: 10px;
+// 			@media (max-width: 645px) {
+// 				display: flex;
+// 			}
+// 			.line-one {
+// 				width: 32px;
+// 				height: 4px;
+// 				background-color: #070707;
+// 				border-radius: 15px;
+// 			}
+// 			.line-two {
+// 				width: 32px;
+// 				height: 4px;
+// 				background-color: #070707;
+// 				border-radius: 15px;
+// 			}
+// 			.line-three {
+// 				width: 32px;
+// 				height: 4px;
+// 				background-color: #070707;
+// 				border-radius: 15px;
+// 			}
+// 		}
+// 		&__button-close {
+// 			width: 32px;
+// 			height: 20px;
+// 			display: flex;
+// 			flex-direction: column;
+// 			gap: 12px;
+// 			.line-one {
+// 				width: 32px;
+// 				height: 4px;
+// 				background-color: #070707;
+// 				border-radius: 15px;
+// 				transform: translateY(6px) rotate(45deg);
+// 			}
+// 			.line-two {
+// 				display: none;
+// 				width: 32px;
+// 				height: 4px;
+// 				background-color: #070707;
+// 				border-radius: 15px;
+// 			}
+// 			.line-three {
+// 				width: 32px;
+// 				height: 4px;
+// 				background-color: #070707;
+// 				border-radius: 15px;
+// 				transform: translateY(-10px) rotate(-45deg);
+// 			}
+// 		}
+// 	}
+// }
