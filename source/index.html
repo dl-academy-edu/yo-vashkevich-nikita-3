@@ -21,7 +21,7 @@
     <link href="css/style.min.css" rel="stylesheet">
     <!-- endbuild -->
   </head>
-  <body>
+  <body class="body">
     <div class="wrapper">
       <header class="header">
         <div class="container header-container">
@@ -29,7 +29,7 @@
             <ul class="header-list">
               <li class="header-list__item item-home"><a class="header-list__link link-focus" href="#">Home</a></li>
               <li class="header-list__item"><a class="header-list__link" href="#">My blog</a></li>
-              <li class="header-list__item"><a class="header-list__link" href="#">Sign In</a></li>
+              <li class="header-list__item"><a class="header-list__link btn-open-sign-js" href="#">Sign In</a></li>
               <li class="header-list__item"><a class="header-list__link" href="#">Register</a></li>
             </ul>
           </nav>
@@ -49,7 +49,7 @@
         <section class="section section-slider">
           <div class="container container-slider">
             <div class="content">
-              @@include('blocks/title.html', {
+              @@include('blocks/title-h1.html', {
                 "text": "Antonina Antoninovna",
                 "class": "content__title",
               })
@@ -113,7 +113,11 @@
         <section class="section section-about">
           <div class="container container-about">
             <div class="content">
-              <h2 class="content__title">About me</h2>
+              <!-- <h2 class="content__title">About me</h2> -->
+              @@include('blocks/title-h2.html', {
+                "text": "About me",
+                "class": "content__title",
+              })
               <div class="content__text">
                 <p class="content__text-one">Aliquam tortor molestie turpis est tristique. Congue diam orci amet quis semper ut. Vitae aenean nibh facilisis urna, ultricies euismod nunc. Commodo fringilla sit hendrerit consequat. Vel ac elit vel sagittis.</p>
                 <p class="content__text-two">Tincidunt id quis pellentesque rutrum pretium. Egestas aliquam dictum ipsum nisl, sed pulvinar. Commodo elit sed a fermentum non justo. Etiam platea consectetur.</p>
@@ -122,9 +126,102 @@
             </div>
           </div>
         </section>
+        <section class="section section-skills">
+          <div class="container container-skills">
+            <div class="block-content">
+              <!-- <h2 class="block-content__title">Skills</h2> -->
+              @@include('blocks/title-h2.html', {
+                "text": "Skills",
+                "class": "block-content__title",
+              })
+              <p class="block-content__description">I work in such programs as</p>
+              <ul class="progressbar">
+                @@include('blocks/progress-item.html', {
+                  "image-src": "./img/icon/html5-icon.png",
+                  "image-width": "79px",
+                  "image-height": "90px",
+                  "image-alt": "html5-logo",
+                  "title__name": "HTML 5",
+                  "precent": "85%",
+                  "label-for": "html",
+                  "id-progress": "html",
+                  "value": "85",
+                })
+                @@include('blocks/progress-item.html', {
+                  "image-src": "./img/icon/css-icon.png",
+                  "image-width": "79px",
+                  "image-height": "90px",
+                  "image-alt": "css-logo",
+                  "title__name": "CSS/SCSS",
+                  "precent": "55%",
+                  "label-for": "css",
+                  "id-progress": "css",
+                  "value": "55",
+                })
+                @@include('blocks/progress-item.html', {
+                  "image-src": "./img/icon/js-icon.png",
+                  "image-width": "68px",
+                  "image-height": "90px",
+                  "image-alt": "javascript-logo",
+                  "title__name": "JavaScript",
+                  "precent": "5%",
+                  "label-for": "js",
+                  "id-progress": "js",
+                  "value": "5",
+                })
+                @@include('blocks/progress-item.html', {
+                  "image-src": "./img/icon/git-icon.png",
+                  "image-width": "90px",
+                  "image-height": "90px",
+                  "image-alt": "Git-logo",
+                  "title__name": "Git/GitHub",
+                  "precent": "15%",
+                  "label-for": "git",
+                  "id-progress": "git",
+                  "value": "15",
+                })
+                @@include('blocks/progress-item.html', {
+                  "image-src": "./img/icon/figma-icon.png",
+                  "image-width": "60px",
+                  "image-height": "90px",
+                  "image-alt": "figma-logo",
+                  "title__name": "Figma",
+                  "precent": "80%",
+                  "label-for": "figma",
+                  "id-progress": "figma",
+                  "value": "80",
+                })
+                <!-- <div class="progressbar__html">
+                  <img class="progressbar__html-img" src="./img/icon/html5-icon.png" width="79px" height="90px" alt="html5">
+                  <p class="progressbar__html-title">HTML5</p>
+                  <div class="progressbar__html-progress">
+                    <label class="progressbar__html-label" for="html">85%</label>
+                    <progress class="progressbar__html-progress" id="html" max="100" value="85"></progress>
+                  </div>
+                </div> -->
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="section section-portfolio">
+          <div class="container container-portfolio">
+            <div class="block-portfolio">
+              @@include('blocks/title-h2.html', {
+                "text": "Portfolio",
+                "class": "block-portfolio__title",
+              })
+              <div class="slider">
+                <h3>there will be a slider here</h3>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       @@include('blocks/footer.html')
+      @@include('blocks/modal-sign-in.html')
+      @@include('blocks/btn-scroll-behavior.html')
     </div>
     <script src="js/app.js" defer></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

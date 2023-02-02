@@ -1,0 +1,16 @@
+.wrapper {
+	position: relative;
+	.btn-scroll {
+		position: fixed;
+		top: 10px;
+		left: 100px;
+		transition: 0.3s;
+		cursor: pointer;
+	}
+	.btn-scroll:hover {
+		transform: scale(1.15);
+	}
+	.btn-scroll:active {
+		transform: scale(0.9);
+	}
+}

@@ -1,0 +1,104 @@
+.progressbar__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 180px;
+	transition: 0.3s;
+	
+	&-title {
+	font-family: $font-gilroy;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	color: $color-gray;
+	margin-top: 20px;
+	margin-bottom: 24px;
+	}
+}
+
+.progressbar__item:hover {
+	transform: scale(1.05);
+}
+
+.progressbar__item-progress {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	padding-top: 0px;
+}
+.progressbar__item-progress label {
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	color: $color-gray;
+}
+.progressbar__item-progress progress {
+	height: 9px;
+	max-width: 142px;
+	@media(max-width:900px) {
+		max-width: 111px;
+	}
+	@media(max-width:500px) {
+		max-width: 94px;
+	}
+}
+.progressbar__item-progress progress::-webkit-progress-bar {
+	background-color: $color-not-available;
+}
+.progressbar__item-progress progress::-webkit-progress-value {
+	background-color: $color-black;
+}
+
+
+
+
+
+
+
+
+// &__item {
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	max-width: 180px;
+	
+// 	&-title {
+// 	font-family: $font-gilroy;
+// 	font-style: normal;
+// 	font-weight: 700;
+// 	font-size: 14px;
+// 	line-height: 17px;
+// 	text-align: center;
+// 	color: $color-gray;
+// 	margin-top: 20px;
+// 	}
+// }
+// &__item-progress {
+// 	display: flex;
+// 	gap: 12px;
+// 	align-items: center;
+// }
+// &__item-progress label {
+// 	font-family: 'Gilroy';
+// 	font-style: normal;
+// 	font-weight: 700;
+// 	font-size: 14px;
+// 	line-height: 17px;
+// 	color: $color-gray;
+// }
+// &__item-progress progress {
+// 	height: 9px;
+// 	max-width: 142px;
+	
+// }
+// &__item-progress progress::-webkit-progress-bar {
+// 	background-color: $color-not-available;
+// }
+// &__item-progress progress::-webkit-progress-value {
+// 	background-color: $color-black;
+// }
+

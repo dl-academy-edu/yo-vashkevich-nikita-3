@@ -1,0 +1,121 @@
+.footer {
+	.container-footer {
+		.contacts {
+			padding: 60px 0px 60px 0px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			&__title {
+				margin-bottom: 22px;
+			}
+			&__description {
+				font-family: $font-gilroy;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 21px;
+				text-align: center;
+				color: $color-black;
+
+				max-width: 269px;
+				margin-bottom: 30px;
+			}
+			&__button {
+				max-width: 190px;
+				background: $color-black;
+				border-radius: 30px;
+
+				font-family: $font-gilroy;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 22px;
+				text-align: center;
+				color: $color-white;
+
+				padding: 10px 29px;
+				margin-bottom: 40px;
+				border: 2.5px solid $color-black;
+				transition: 0.3s;
+			}
+			&__button:hover {
+				color: $color-black;
+				background: $color-white;
+				transform: scale(1.01);
+			}
+			&__button:active {
+				color: $color-black;
+				background: $color-white;
+				transform: scale(0.9);
+			}
+
+			.social {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				row-gap: 10px;
+				column-gap: 9px;
+				max-width: 318px;
+				margin-bottom: 40px;
+				@media(max-width:380px) {
+					max-width: 200px;
+				}
+				a {
+					padding: 8px 17px;
+					border: 2.5px solid $color-black;
+					border-radius: 30px;
+					font-family: 'Gilroy';
+					font-style: normal;
+					font-weight: 700;
+					font-size: 18px;
+					line-height: 22px;
+					text-align: center;
+					color: $color-black;
+					transition: 0.3s;
+				}
+				a:hover {
+					transform: scale(1.05);
+					color: $color-white;
+					background-color: $color-black;
+					
+				}
+				a:active {
+					transform: scale(0.9);
+				}
+				// a:focus {
+				// 	transform: scale(1);
+				// }
+			}
+			&__dl {
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+				p, a {
+				font-family: $color-gray;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 16px;
+				text-align: center;
+				color: #828282;
+				}
+				&-link {
+					display: inline-flex;
+					border-bottom: 1px dashed #828282;
+					transition: 0.3s;
+				}
+				&-link:hover {
+					transform: scale(1.02);
+					color: $color-black;
+					border-bottom: 1px dashed $color-black;
+				}
+				&-link:active {
+					transform: scale(0.9);
+					color: $color-black;
+					border-bottom: 1px dashed $color-black;
+				}
+			}
+		}
+	}
+}
