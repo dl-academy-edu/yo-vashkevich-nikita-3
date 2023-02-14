@@ -55,13 +55,13 @@ html,body{
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
-input,button,textarea{font-family: inherit;}
+input,button,textarea{font-family: $font-gilroy;}
 input::-ms-clear{display: none;}
 button{cursor: pointer;}
 button::-moz-focus-inner{padding: 0;border: 0;}
 a, a:visited{text-decoration: none;}
 ul li{list-style: none;}
-img{vertical-align: top;}
+img{vertical-align: top;user-select: none;}
 
 
 p {
@@ -110,3 +110,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 
+:active, :hover, :focus {
+	outline: 0;
+	outline-offset: 0;
+}

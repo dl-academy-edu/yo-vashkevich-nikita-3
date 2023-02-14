@@ -1,0 +1,27 @@
+.btn-close {
+	transition: 0.3s;
+}
+
+.btn-close:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+	rect {
+		fill: $color-black;
+	}
+}
+
+.btn-close:focus {
+	cursor: pointer;
+	transform: scale(1);
+	rect {
+		fill: $color-black;
+	}
+}
+
+.btn-close:active {
+	cursor: pointer;
+	transform: scale(0.9);
+	rect {
+		fill: $color-black;
+	}
+}

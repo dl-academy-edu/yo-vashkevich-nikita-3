@@ -1,37 +1,31 @@
 (function() {
 	//получаем ссылки на наши элементы
 	const btnScroll = document.querySelector('.btn-scroll-js'); //кнопка-стрелка для скролла
-	const modalSignIn = document.querySelector('.modal-sign-in-js'); //модальное окно
-	const btnOpenSignIn = document.querySelector('.btn-open-sign-js'); //ссылка в навигации Sign in
-	const btnCloseSignIn = document.querySelector('.btn-close-js'); //кнопка-крестик
 
 	//проверка наличия элементов в вёрстке
-	if (!btnScroll || !modalSignIn || !btnOpenSignIn || !btnCloseSignIn) return;
+	if (!btnScroll) return;
 
 	//вешаем слушатель события которое связано с кнопкой скролла
 	window.addEventListener('scroll', (e) => {
-		//создаем переменную которая хранит значение расстояния от верха страницы
-		const screenTop = window.scrollY;
-		console.log(screenTop);
+		// console.log(window.scrollY);
 		
 		//если высота больше 1500px то выполняем функцию которая показывает кнопку, если меньше то скрываем кнопку
-		if(screenTop >= 1500) {
+		if(window.scrollY >= 1500) {
 			visuallyBtn();
 		} else {
 			notVisuallyBtn();
 		}
 
 		btnScroll.addEventListener('click', scrollUp);
-		window.addEventListener('keydown', signInEsc);
 	})
 
 	//функция отображающая кнопку
 	function visuallyBtn() {
-		btnScroll.classList.remove('none-js');
+		btnScroll.classList.remove('display-none-js');
 	}
 	//функция скрывающая кнопку
 	function notVisuallyBtn() {
-		btnScroll.classList.add('none-js');
+		btnScroll.classList.add('display-none-js');
 	}
 
 	//функция скролла 
@@ -44,26 +38,6 @@
 		});
 	}
 
-	btnOpenSignIn.addEventListener('click', signInOpen);
-	btnCloseSignIn.addEventListener('click', signInClose);
-	document.addEventListener('keydown', signInClose);
-		//функция открытия модального окна
-	function signInOpen() {
-		modalSignIn.classList.remove('none-js');
-	}
-	//функция закрытия модального окна
-	function signInClose() {
-		modalSignIn.classList.add('none-js');
-	}
-	//функция закрытия модального окна по кнопке esc
-	function signInEsc() {
-		if('keyCode' === 27) {
-			signInClose();
-		}
-	}
-
-
-
 
 	//удаляем слушатели событий
 	function closeModal() {
@@ -75,12 +49,58 @@
 
 
 
+//Menu Burger
+(function() {
+	const menuBurger = document.querySelector('.burger-wrapper'); //модальное окно Register
+	const btnBurgerOpen = document.querySelector('.burger__button-open'); //кнопка открытия бургера
+	const btnBurgerClose = document.querySelector('.btn-close-burger-js'); //кнопка-крестик закрытия бургера
+
+	if (!menuBurger || !btnBurgerOpen || !btnBurgerClose) return;
+
+	btnBurgerOpen.addEventListener('click', burgerOpen);
+	btnBurgerClose.addEventListener('click', burgerClose);
+		//функция открытия модального окна
+	function burgerOpen() {
+		menuBurger.classList.remove('burger-not-visible');
+	}
+	//функция закрытия модального окна
+	function burgerClose() {
+		menuBurger.classList.add('burger-not-visible');
+	}
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 	// signInBtnClose.addEventListener('keydown', signInEsc);
 
 
+
+	//валиация через атрибут реквайред 
+
+	//novalidate
+
+	
 
 
 

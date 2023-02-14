@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="google" content="notranslate">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>DL Academy</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<script>
+		var docElement = document.documentElement;
+		docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+	</script>
+
+	<!-- Favicon -->
+
+	<!-- build:css -->
+	<link href="css/style.min.css" rel="stylesheet">
+	<!-- endbuild -->
+</head>
+<body class="body">
+	<div class="wrapper">
+		<header class="header">
+			<div class="container header-container">
+				<nav class="header-nav">
+					<ul class="header-list">
+					<li class="header-list__item item-home"><a class="header-list__link link-focus" href="./index.html">Home</a></li>
+					<li class="header-list__item"><a class="header-list__link" href="./my-blog.html">My blog</a></li>
+					<li class="header-list__item"><a class="header-list__link btn-open-sign-js" href="#">Sign In</a></li>
+					<li class="header-list__item"><a class="header-list__link btn-open-register-js" href="#">Register</a></li>
+					</ul>
+				</nav>
+			</div>
+		<div class="burger-wrapper burger-not-visible">
+			<div class="burger">
+				@@include('blocks/button-cross.html', {
+				"class": "burger__close-btn btn-close",
+				"class-js": "btn-close-burger-js",
+				})
+				<nav class="burger__nav">
+					<ul class="burger-list">
+						<li class="burger-list__item item-home"><a class="burger-list__link link-home" href="./index.html">Home</a></li>
+						<li class="burger-list__item"><a class="burger-list__link" href="./my-blog.html">My blog</a></li>
+						<li class="burger-list__item"><a class="burger-list__link btn-open-sign-js" href="#">Sign In</a></li>
+						<li class="burger-list__item"><a class="burger-list__link btn-open-register-js" href="#">Register</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		</header>
+		<main class="content">
+		<section class="section section-blog">
+			<div class="container container-blog">
+				<div class="content">
+					@@include('blocks/title-h1.html', {
+						"text": "My blog",
+						"class": "content__title",
+					})
+					<div class="content__inner">
+						<div class="burger__button-open">
+							<div class="line-one"></div>
+							<div class="line-two"></div>
+							<div class="line-three"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section section-forms">
+			<div class="container container-forms">
+				<form class="filter" name="filterForm">
+					<fieldset class="filter__tags">
+						<legend>Tags</legend>
+						<div class="filter__tags-checkbox">
+							<!-- <input type="checkbox" name="" id="">
+							<input type="checkbox" name="" id="">
+							<input type="checkbox" name="" id="">
+							<input type="checkbox" name="" id="">
+							<input type="checkbox" name="" id="">
+							<input type="checkbox" name="" id=""> -->
+						</div>
+					</fieldset>
+					<fieldset class="filter__views">
+						<legend>Views</legend>
+						<div class="filter__views-radio">
+							<input class="filter__views-input" type="radio" id="radio-one" name="views" value="100500">
+							<label class="filter__views-label" for="radio-one">100-500</label>
+						</div>
+						<div class="filter__views-radio">
+							<input class="filter__views-input" type="radio" id="radio-two" name="views" value="5001000">
+							<label class="filter__views-label" for="radio-two">500-1000</label>
+						</div>
+						<div class="filter__views-radio">
+							<input class="filter__views-input" type="radio" id="radio-three" name="views" value="10002000">
+							<label class="filter__views-label" for="radio-three">1000-2000</label>
+						</div>
+					</fieldset>
+					<fieldset class="filter__comments">
+						<legend>Comments</legend>
+						<div class="filter__comments-checkbox">
+							<input type="checkbox" id="checkbox-one" name="comments" value="0">
+							<label for="checkbox-one">0</label>
+						</div>
+						<div class="filter__comments-checkbox">
+							<input type="checkbox" id="checkbox-two" name="comments" value="01">
+							<label for="checkbox-two">0-1</label>
+						</div>
+						<div class="filter__comments-checkbox">
+							<input type="checkbox" id="checkbox-three" name="comments" value="1-50">
+							<label for="checkbox-three">1-50</label>
+						</div>
+					</fieldset>
+					<fieldset class="filter__show">
+						<legend>How show?</legend>
+						<div class="filter__show-radio">
+							<input class="filter__show-input" type="radio" id="show-one" name="howShow" value="5">
+							<label class="filter__show-label" for="show-one">Show 5</label>
+						</div>
+						<div class="filter__show-radio">
+							<input class="filter__show-input" type="radio" id="show-two" name="howShow" value="10">
+							<label class="filter__show-label" for="show-two">Show 10</label>
+						</div>
+					</fieldset>
+					<fieldset class="filter__sort">
+						<legend>Sort by</legend>
+						<div class="filter__sort-radio">
+							<input class="filter__sort-input" type="radio" id="sort-date" name="sortBy" value="date">
+							<label class="filter__sort-label" for="sort-date">date</label>
+						</div>
+						<div class="filter__sort-radio">
+							<input class="filter__sort-input" type="radio" id="sort-title" name="sortBy" value="title">
+							<label class="filter__sort-label" for="sort-title">title</label>
+						</div>
+						<div class="filter__sort-radio">
+							<input class="filter__sort-input" type="radio" id="sort-views" name="sortBy" value="views">
+							<label class="filter__sort-label" for="sort-views">views</label>
+						</div>
+					</fieldset>
+					<fieldset class="filter__reset">
+						<legend class="filter__reset-legend">reset form</legend>
+						<button class="filter__reset-btn" type="submit">Apply</button>
+					</fieldset>
+				</form>
+				<form class="search">
+					<input class="search__input" type="search" id="post-search" name="post-search">
+					<button class="search__btn" type="button">Search</button>
+				</form>
+			</div>
+		</section>
+		<section class="section section-posts">
+			<div class="container container-posts">
+				@@include('blocks/title-h2.html', {
+					"text": "posts",
+					"class": "visually-none",
+				})
+				@@include('blocks/post.html')
+				@@include('blocks/post.html')
+				@@include('blocks/post.html')
+				@@include('blocks/post.html')
+				@@include('blocks/post.html')
+				<div class="post-nav">
+					<button class="post-nav__previous" type="button">
+						<svg class="post-nav__previous-arrow" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="40.75" y="40.75" width="39.5" height="39.5" rx="19.75" transform="rotate(-180 40.75 40.75)" stroke="#070707" stroke-width="2.5"/>
+							<rect x="24.5791" y="32.6992" width="16.5512" height="3" rx="1.5" transform="rotate(-135 24.5791 32.6992)" fill="#070707"/>
+							<rect x="26.7002" y="11.4199" width="16.5512" height="3" rx="1.5" transform="rotate(135 26.7002 11.4199)" fill="#070707"/>
+						</svg>                
+					</button>
+					<div class="post-pagination">
+						<button class="post-pagination__button" type="button">1</button>
+						<button class="post-pagination__button" type="button">2</button>
+						<button class="post-pagination__button" type="button">3</button>
+						<button class="post-pagination__button" type="button">4</button>
+						<button class="post-pagination__button" type="button">5</button>
+						<button class="post-pagination__button" type="button">6</button>
+						<button class="post-pagination__button" type="button">7</button>
+						<button class="post-pagination__button" type="button">8</button>
+					</div>
+					<button class="post-nav__next" type="button">
+						<svg class="post-nav__next-arrow" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect x="1.25" y="1.25006" width="39.5" height="39.5" rx="19.75" stroke="#070707" stroke-width="2.5"/>
+							<rect x="17.4209" y="9.30084" width="16.5512" height="3" rx="1.5" transform="rotate(45 17.4209 9.30084)" fill="#070707"/>
+							<rect x="15.2998" y="30.5801" width="16.5512" height="3" rx="1.5" transform="rotate(-45 15.2998 30.5801)" fill="#070707"/>
+						</svg> 
+					</button>
+				</div>
+			</div>
+		</section>
+		</main>
+		@@include('blocks/footer.html')
+		@@include('blocks/btn-scroll-behavior.html')
+	</div>
+	<script src="js/app.js" defer></script>
+	<script src="js/script.js"></script>
+	<script src="js/popups.js"></script>
+	<script src="js/local-storage.js"></script>
+	<!-- <script src="js/form-validation.js"></script> -->
+</body>
+</html>

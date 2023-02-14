@@ -8,9 +8,8 @@
 console.log('Задача 1');
 //
 let enterNumber = prompt('Введите число от 1', 0); 
-enterNumber = +enterNumber;
 let i = 0;
-while (i < enterNumber) {
+while (i < +enterNumber) {
 	i++;
 	if (i % 4 === 0) {
 		continue;
@@ -25,8 +24,7 @@ while (i < enterNumber) {
 console.log('\nЗадача 2');
 //
 let usNumber = prompt('Введите число', 0);
-usNumber = +usNumber;
-let count = usNumber - 1; //чтобы каждый раз умнодать число на себя же но - 1, от этого же и будет зависеть количество итераций
+let count = +usNumber - 1; //чтобы каждый раз умнодать число на себя же но - 1, от этого же и будет зависеть количество итераций
 while (count > 0) {
 	usNumber = usNumber * count;
 	count--;
