@@ -1,0 +1,145 @@
+
+.form {
+	background: #FFFFFF;
+	border: 2.5px solid $color-black;
+	padding: 40px;
+	@media (max-width:500px) {
+		border: none;
+		padding: 20px;
+	}
+}
+
+input::placeholder {
+	color: $color-white;
+}
+
+input {
+	padding: 14px;
+	border: 2.5px solid $color-not-available;
+}
+
+input:hover {
+	border: 2.5px solid $color-gray;
+}
+
+input:focus {
+	border: 2.5px solid $color-black;
+}
+
+// input:valid {
+// 	border-color: $color-green;
+// }
+
+// input:required:invalid {
+// 	border-color: $color-red;
+// }
+
+.input-success, .input-success:focus, .input-success:hover{
+	border-color: $color-green;
+}
+
+.input-error {
+	border-color: $color-red;
+}
+
+.input-error:hover {
+	border-color: $color-red;
+}
+
+label {
+	font-family: $font-gilroy;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: $color-black;
+}
+
+.red {
+	color: $color-red;
+}
+
+
+textarea {
+	padding: 14px;
+	border: 2.5px solid $color-not-available;
+}
+
+textarea:hover {
+	border: 2.5px solid $color-gray;
+}
+
+textarea:focus {
+	border: 2.5px solid $color-black;
+}
+
+
+
+
+//FOR VALIDATION
+
+// body {
+// 	font: 1em sans-serif;
+// 	width: 200px;
+// 	padding: 0;
+// 	margin : 0 auto;
+// }
+
+// p * {
+// 	display: block;
+// }
+
+input[type=email]{
+	// -webkit-appearance: none;
+	// appearance: none;
+
+	// border: 1px solid #333;
+	// margin: 0;
+
+	// font-family: inherit;
+	// font-size: 90%;
+
+	// box-sizing: border-box;
+}
+
+/* This is our style for the invalid fields */
+// input:invalid{
+// 	border-color: $color-red;
+// 	// background-color: #FDD;
+// }
+
+input:focus:invalid {
+	outline: none;
+}
+
+/* This is the style of our error messages */
+.error-message {
+	width  : 100%;
+	padding: 0;
+	font-family: $font-gilroy;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 16px;
+	color: $color-red;
+
+	box-sizing: border-box;
+	padding-top: 10px;
+}
+
+// .error.active {
+// 	padding: 10px;
+// }
+
+.success-message {
+	color: $color-green;
+	padding-top: 10px;
+}
+
+// .no-error.active {
+// 	padding: 10px;
+// }
+
+span {
+	color: $color-red;
+}
