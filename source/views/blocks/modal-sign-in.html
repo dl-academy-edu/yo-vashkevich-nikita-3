@@ -7,13 +7,13 @@
 		<div class="form-inner-wrapper">
 			<form class="form" action="#" name="signIn" id="add-form" novalidate>
 				<div class="form__email error-js">
-					<label class="form__email-label error-label" for="mail">Email<span class="red"> *</span></label>
-					<input class="form__emeil-input req-js email-js error-js" type="text" id="mail" name="mail">
-					<span class="error" aria-live="polite"></span>
+					<label class="form__email-label error-label" for="email">Email<span class="red"> *</span></label>
+					<input class="form__emeil-input req-js email-js error-js" type="email" id="email" name="email" required>
+					<!-- <span class="error"></span> -->
 				</div>
 				<div class="form__password error-js">
 					<label class="form__password-label error-label" for="password">Password<span class="red"> *</span></label>
-					<input class="form__password-input req-js error-js" type="password" id="password" name="password">
+					<input class="form__password-input req-js error-js" type="password" id="password" name="password" required>
 				</div>
 				@@include('blocks/button.html', {
 					"text": "Login",
@@ -28,4 +28,5 @@
 			})
 		</div>
 	</div>
+@@include('blocks/message-modal.html')
 </section>

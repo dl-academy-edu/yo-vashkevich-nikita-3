@@ -11,7 +11,7 @@
 	const buttonNext = document.querySelector('.slider-nav__next');
 	//
 	const pagination = document.querySelector('.slider-pagination-js');
-	console.log(pagination);
+	// console.log(pagination);
 	//
 
 

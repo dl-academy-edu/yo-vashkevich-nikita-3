@@ -5,60 +5,58 @@
 	})
 	<div class="wrapper">
 		<div class="wrapper__form">
-			<form class="form register-js" action="#" >
+			<form class="form register-js" name="Register" novalidate>
 				<div class="form__email">
-					<label class="form__label" for="email">Email<span class="red"> *</span></label>
-					<input class="form__input" type="email" id="email">
+					<label class="form__label" for="mail">Email<span class="red"> *</span></label>
+					<input class="form__input" type="email" id="mail" name="mail" required>
 				</div>
 				<div class="form__inline">
 					<div class="form__name">
 						<label class="form__label" for="name">Name<span class="red"> *</span></label>
-						<input class="form__input" type="text" id="name">
+						<input class="form__input" type="text" id="name" name="name" required>
 					</div>
 					<div class="form__surname">
 						<label class="form__label" for="surname">Surname<span class="red"> *</span></label>
-						<input class="form__input" type="text" id="surname">
+						<input class="form__input" type="text" id="surname" name="surname" required>
 					</div>
 				</div>
 				<div class="form__inline">
 					<div class="form__password">
 						<label class="form__label" for="passw">Password<span class="red"> *</span></label>
-						<input class="form__input" type="password" id="passw">
+						<input class="form__input" type="password" id="passw" name="password" required>
 					</div>
 					<div class="form__password-repeat">
 						<label class="form__label" for="password-repeat">Repeat password<span class="red"> *</span></label>
-						<input class="form__input" type="password" id="password-repeat">
+						<input class="form__input" type="password" id="password-repeat" name="passwordRepeat" required>
 					</div>
 				</div>
 				<div class="form__inline">
 					<div class="form__location">
 						<label class="form__label" for="location">Location<span class="red"> *</span></label>
-						<input class="form__input" type="text" id="location">
+						<input class="form__input" type="text" id="location" name="location" required>
 					</div>
 					<div class="form__age">
 						<label class="form__label" for="age">Age<span class="red"> *</span></label>
-						<input class="form__input" type="text" id="age">
+						<input class="form__input" type="text" id="age" name="age" required>
 					</div>
 				</div>
 				<div class="form__check">
-					<input class="form__check-input" type="checkbox" id="consent">
+					<input class="form__check-input" type="checkbox" id="consent" name="checkbox" required>
 					<label class="form__check-label" for="consent">Clicking on the button, you consent to the processing of your personal data.</label>
+					@@include('blocks/button.html', {
+						"text": "Sign Up",
+						"type": "submit",
+						"class": "form__button",
+						"class-mode": "button-submit",
+					})
+					<button class="form__button button-disabled" type="submit" disabled>Sign Up</button>
 				</div>
-				<!-- <button class="button__form" type="button">Sign up</button> -->
-				@@include('blocks/button.html', {
-					"text": "Sign Up",
-					"type": "submit",
-					"class": "form__button",
-				})
 			</form>
-			<!-- <svg class="btn-close btn-close-js" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<rect x="2.82861" width="32" height="4" rx="2" transform="rotate(45 2.82861 0)" fill="#828282"/>
-				<rect y="22.6289" width="32" height="4" rx="2" transform="rotate(-45 0 22.6289)" fill="#828282"/>
-			</svg> -->
 			@@include('blocks/button-cross.html', {
 				"class": "btn-close",
 				"class-js": "btn-close-register-js",
 			})
 		</div>
 	</div>
+	@@include('blocks/message-modal.html')
 </section>

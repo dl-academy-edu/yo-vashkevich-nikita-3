@@ -11,7 +11,7 @@
 
 <body>
     <div class="container mt-5">
-        <form name="signUp">
+        <form name="signUp" novalidate>
             <h2 class="mt-5">Регистрация: </h2>
             <div class="form-row mt-3">
                 <div class="col">
@@ -19,11 +19,11 @@
                         Почта (Email):
                     </label>
                     <input name="email" type="text" class="form-control" id="exampleFormControlInput1"
-                        placeholder="name@example.com">
+                        placeholder="name@example.com" required>
                 </div>
                 <div class="col">
                     <label for="exampleFormControlInput2">Пароль: </label>
-                    <input name="password" type="password" class="form-control" id="exampleFormControlInput2">
+                    <input name="password" type="password" class="form-control" id="exampleFormControlInput2" required>
                 </div>
             </div>
 
@@ -76,3 +76,41 @@
 </body>
 
 </html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <form name="signUp" novalidate>
+            <h2 class="mt-5">Регистрация: </h2>
+            <div class="form-row mt-3">
+                <div class="col">
+                    <label for="exampleFormControlInput1">
+                        Почта (Email):
+                    </label>
+                    <input name="email" type="text" class="form-control" id="exampleFormControlInput1"
+                        placeholder="name@example.com" required>
+                </div>
+                <div class="col">
+                    <label for="exampleFormControlInput2">Пароль: </label>
+                    <input name="password" type="password" class="form-control" id="exampleFormControlInput2" required>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-primary mt-3">Регистрация</button>
+        </form>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html> -->

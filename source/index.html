@@ -31,10 +31,11 @@
         <div class="container header-container">
           <nav class="header-nav">
             <ul class="header-list">
-              <li class="header-list__item item-home"><a class="header-list__link link-focus" href="#">Home</a></li>
+              <li class="header-list__item item-home"><a class="header-list__link link-focus" href="./index.html">Home</a></li>
               <li class="header-list__item"><a class="header-list__link" href="././my-blog.html">My blog</a></li>
               <li class="header-list__item"><a class="header-list__link btn-open-sign-js" href="#">Sign In</a></li>
               <li class="header-list__item"><a class="header-list__link btn-open-register-js" href="#">Register</a></li>
+              <li class="header-list__item"><a class="header-list__link j-to-profile hidden" href="#">My profile</a></li>
             </ul>
           </nav>
         </div>
@@ -46,8 +47,8 @@
             })
             <nav class="burger__nav">
               <ul class="burger-list">
-                <li class="burger-list__item item-home"><a class="burger-list__link link-home" href="#">Home</a></li>
-                <li class="burger-list__item"><a class="burger-list__link" href="#">My blog</a></li>
+                <li class="burger-list__item item-home"><a class="burger-list__link link-home" href="./index.html">Home</a></li>
+                <li class="burger-list__item"><a class="burger-list__link" href="./my-blog.html">My blog</a></li>
                 <li class="burger-list__item"><a class="burger-list__link btn-open-sign-js" href="#">Sign In</a></li>
                 <li class="burger-list__item"><a class="burger-list__link btn-open-register-js" href="#">Register</a></li>
               </ul>
@@ -230,17 +231,24 @@
         </section>
       </main>
       @@include('blocks/footer.html')
+      @@include('blocks/preloader.html')
       @@include('blocks/modal-sign-in.html')
       @@include('blocks/modal-register.html')
       @@include('blocks/modal-send-message.html')
       @@include('blocks/btn-scroll-behavior.html')
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script src="js/authorization.js"></script> -->
+    <script src="js/swiper.js"></script>
     <script src="js/app.js" defer></script>
-    <script src="js/script.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/popups.js"></script>
     <script src="js/form-validation.js"></script>
-    <script src="js/swiper.js"></script>
+    <script src="js/registration.js"></script>
+    <script src="js/authorization.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/burger.js"></script>
   </body>
 </html>

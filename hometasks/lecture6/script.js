@@ -25,6 +25,8 @@
 
 })();
 
+
+//
 function getAll(form) {
 	const inputs = form.querySelectorAll('input');
 	const textareas = form.querySelectorAll('textarea');
@@ -101,6 +103,7 @@ function errorCreator(message) {
 (function() {
 	const form = document.forms.signUp;
 
+	if(!form) return;
 	form.addEventListener('submit', (e) => {
 		e.preventDefault(); //ломаем стандартное повдеение событий 
 
@@ -110,10 +113,11 @@ function errorCreator(message) {
 		let errors = {}; //объект под ошибки
 
 		//проверка условий
-		if(!userData.accepnt) errors.accepnt = 'GJ;fkqcnf выберите пункт';
+		// if(!userData.accepnt) errors.accepnt = 'GJ;fkqcnf выберите пункт';
 		if(!isEmailCorrect(userData.email)) errors.email = 'Пожалуйста введите корректный емейл';
 		//проверка пароля 
 		if(!userData.password.length < 6) errors.password = 'Пароль слишком короткий';
+		if(!userData.name.length) errors.name = 'dgdfdfgdfv';
 
 
 		if(Object.keys(errors).length) {
@@ -146,3 +150,38 @@ function errorCreator(message) {
 
 
 //хес реквайред
+
+
+
+
+
+
+
+
+// function setRight(input, messageRight) {
+// 	if(input[0]) {
+// 		//функция при интерабельными лементами
+
+// 	} else {
+// 		setRightText(input, messageRight);
+// 	}
+// 	//aeyrwbz ghb hf,jnt c j,sxysvb [ktvtynfvb]
+// }
+
+// function setRightText(input, messageRight) {
+// 	//создать элемент ошщиьки 
+// 	const right = rightCreator(messageRight);
+// 	input.classList.add('is-right');//класс зеленый бордер
+// 	input.insertAdjacentElement('afterend', right);
+// 	input.addEventListener('input', () => {
+// 		right.remove();
+// 		input.classList.remove('is-right');
+// 	}, {once: true});
+// }
+
+// function rightCreator(message) {
+// 	let messageRight = document.createElement('div');
+// 	messageRight.classList.add('invalid-feedback');
+// 	messageRight.innerText = message;
+// 	return messageRight;
+// }

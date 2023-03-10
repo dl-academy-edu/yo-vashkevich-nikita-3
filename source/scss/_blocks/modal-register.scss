@@ -15,7 +15,7 @@
 			display: flex;
 			gap: 10px;
 			margin: 0 auto;
-			margin-top: 117px;
+			// margin-top: 117px;
 			padding-left: 34px;
 			@media (max-width:800px) {
 				flex-direction: column;
@@ -202,6 +202,30 @@
 					line-height: 16px;
 					color: $color-black;
 				}
+				//check with button
+				&-input ~ .button-submit {
+					display: none;
+				}
+				&-input:checked ~ .button-disabled  {
+					display: none;
+				}
+				&-input:checked ~ .button-submit {
+					display: block;
+				}
+			
+				// .button-submit,
+				// .button-disabled {
+				// 	width: 106px;
+				// 	margin-bottom: 4px;
+				// }
+			
+				// .button-submit{
+				// 	transition: 0.4s;
+				// }
+				// &-input:checked ~ .button-submit:hover {
+				// 	transform: scale(1.04);
+				// }
+				//
 			}
 			button {
 				border: 2.5px solid $color-black;
@@ -232,7 +256,12 @@
 			button:disabled {
 				border: 2.5px solid $color-not-available;
 				color: $color-not-available;
-				transform: scale(0.9);
+			}
+			button:disabled:hover {
+				border: 2.5px solid $color-not-available;
+				color: $color-not-available;
+				background-color: $color-white;
+				transform: scale(1);
 			}
 		}
 		.btn-close {
@@ -249,7 +278,42 @@
 
 
 
+// &__check {
 
+// 	&-input:active ~ .form__check-label {
+// 		opacity: 0.2;
+// 	}
+// 	label:active {
+// 		opacity: 0.2;
+// 	}
+// 	label:disabled {
+// 		opacity: 0.2;
+// 	}
+
+// 	//button
+// 	&-input ~ .button-submit {
+// 		display: none;
+// 	}
+// 	&-input:checked ~ .button-disabled  {
+// 		display: none;
+// 	}
+// 	&-input:checked ~ .button-submit {
+// 		display: block;
+// 	}
+
+// 	.button-submit,
+// 	.button-disabled {
+// 		width: 106px;
+// 		margin-bottom: 4px;
+// 	}
+
+// 	.button-submit{
+// 		transition: 0.4s;
+// 	}
+// 	&-input:checked ~ .button-submit:hover {
+// 		transform: scale(1.04);
+// 	}
+// }
 
 
 

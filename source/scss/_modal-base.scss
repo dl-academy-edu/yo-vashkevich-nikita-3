@@ -9,6 +9,10 @@
 	}
 }
 
+input::placeholder {
+	color: $color-white;
+}
+
 input {
 	padding: 14px;
 	border: 2.5px solid $color-not-available;
@@ -22,11 +26,23 @@ input:focus {
 	border: 2.5px solid $color-black;
 }
 
-// input:required:valid {
+// input:valid {
 // 	border-color: $color-green;
 // }
 
-input:required:invalid {
+// input:required:invalid {
+// 	border-color: $color-red;
+// }
+
+.input-success, .input-success:focus, .input-success:hover{
+	border-color: $color-green;
+}
+
+.input-error {
+	border-color: $color-red;
+}
+
+.input-error:hover {
 	border-color: $color-red;
 }
 
@@ -87,17 +103,17 @@ input[type=email]{
 }
 
 /* This is our style for the invalid fields */
-input:invalid{
-	border-color: $color-red;
-	// background-color: #FDD;
-}
+// input:invalid{
+// 	border-color: $color-red;
+// 	// background-color: #FDD;
+// }
 
 input:focus:invalid {
 	outline: none;
 }
 
 /* This is the style of our error messages */
-.error {
+.error-message {
 	width  : 100%;
 	padding: 0;
 	font-family: $font-gilroy;
@@ -108,14 +124,16 @@ input:focus:invalid {
 	color: $color-red;
 
 	box-sizing: border-box;
+	padding-top: 10px;
 }
 
-.error.active {
-	padding: 10px;
-}
+// .error.active {
+// 	padding: 10px;
+// }
 
-.no-error {
+.success-message {
 	color: $color-green;
+	padding-top: 10px;
 }
 
 // .no-error.active {

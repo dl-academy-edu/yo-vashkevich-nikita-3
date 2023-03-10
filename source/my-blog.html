@@ -74,13 +74,8 @@
 				<form class="filter" name="filterForm">
 					<fieldset class="filter__tags">
 						<legend>Tags</legend>
-						<div class="filter__tags-checkbox">
-							<!-- <input type="checkbox" name="" id="">
-							<input type="checkbox" name="" id="">
-							<input type="checkbox" name="" id="">
-							<input type="checkbox" name="" id="">
-							<input type="checkbox" name="" id="">
-							<input type="checkbox" name="" id=""> -->
+						<div class="filter__tags-checkbox select-of-box-js">
+							<!-- checkboxes js -->
 						</div>
 					</fieldset>
 					<fieldset class="filter__views">
@@ -146,7 +141,7 @@
 				</form>
 				<form class="search">
 					<input class="search__input" type="search" id="post-search" name="post-search">
-					<button class="search__btn" type="button">Search</button>
+					<button class="search__btn btn-primary" type="button">Search</button>
 				</form>
 			</div>
 		</section>
@@ -156,47 +151,55 @@
 					"text": "posts",
 					"class": "visually-none",
 				})
+				<!-- @@include('blocks/post.html')
 				@@include('blocks/post.html')
 				@@include('blocks/post.html')
 				@@include('blocks/post.html')
-				@@include('blocks/post.html')
-				@@include('blocks/post.html')
+				@@include('blocks/post.html') -->
+				<div class="result-js"></div>
 				<div class="post-nav">
-					<button class="post-nav__previous" type="button">
+					<!-- <button class="post-nav__previous" type="button">
 						<svg class="post-nav__previous-arrow" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<rect x="40.75" y="40.75" width="39.5" height="39.5" rx="19.75" transform="rotate(-180 40.75 40.75)" stroke="#070707" stroke-width="2.5"/>
 							<rect x="24.5791" y="32.6992" width="16.5512" height="3" rx="1.5" transform="rotate(-135 24.5791 32.6992)" fill="#070707"/>
 							<rect x="26.7002" y="11.4199" width="16.5512" height="3" rx="1.5" transform="rotate(135 26.7002 11.4199)" fill="#070707"/>
 						</svg>                
-					</button>
-					<div class="post-pagination">
-						<button class="post-pagination__button" type="button">1</button>
+					</button> -->
+					<div class="post-pagination pagination-js">
+						<!-- <button class="post-pagination__button" type="button">1</button>
 						<button class="post-pagination__button" type="button">2</button>
 						<button class="post-pagination__button" type="button">3</button>
 						<button class="post-pagination__button" type="button">4</button>
 						<button class="post-pagination__button" type="button">5</button>
 						<button class="post-pagination__button" type="button">6</button>
 						<button class="post-pagination__button" type="button">7</button>
-						<button class="post-pagination__button" type="button">8</button>
+						<button class="post-pagination__button" type="button">8</button> -->
 					</div>
-					<button class="post-nav__next" type="button">
+					<!-- <button class="post-nav__next" type="button">
 						<svg class="post-nav__next-arrow" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<rect x="1.25" y="1.25006" width="39.5" height="39.5" rx="19.75" stroke="#070707" stroke-width="2.5"/>
 							<rect x="17.4209" y="9.30084" width="16.5512" height="3" rx="1.5" transform="rotate(45 17.4209 9.30084)" fill="#070707"/>
 							<rect x="15.2998" y="30.5801" width="16.5512" height="3" rx="1.5" transform="rotate(-45 15.2998 30.5801)" fill="#070707"/>
 						</svg> 
-					</button>
+					</button> -->
 				</div>
 			</div>
 		</section>
 		</main>
 		@@include('blocks/footer.html')
+		@@include('blocks/modal-sign-in.html')
+      @@include('blocks/modal-register.html')
+      @@include('blocks/modal-send-message.html')
 		@@include('blocks/btn-scroll-behavior.html')
+		@@include('blocks/preloader.html')
 	</div>
 	<script src="js/app.js" defer></script>
 	<script src="js/script.js"></script>
+	<script src="js/burger.js"></script>
 	<script src="js/popups.js"></script>
 	<script src="js/local-storage.js"></script>
+	<script src="js/my-blog.js"></script>
+
 	<!-- <script src="js/form-validation.js"></script> -->
 </body>
 </html>

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta name="google" content="notranslate">
+	<meta name="format-detection" content="telephone=no">
+
+	<title>DL Academy</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<script>
+		var docElement = document.documentElement;
+		docElement.className = docElement.className.replace(/\bno-js\b/, '') + ' js';
+	</script>
+
+	<!-- Favicon -->
+
+	<!-- build:css -->
+	<link href="css/style.min.css" rel="stylesheet">
+	<!-- endbuild -->
+</head>
+<body class="body">
+	<div class="wrapper">
+		<header class="header">
+			<div class="container header-container">
+				<nav class="header-nav">
+					<ul class="header-list">
+					<li class="header-list__item item-home"><a class="header-list__link link-focus" href="./index.html">Home</a></li>
+					<li class="header-list__item"><a class="header-list__link" href="./my-blog.html">My blog</a></li>
+					<li class="header-list__item"><a class="header-list__link" href="./profile.html">My profile</a></li>
+					</ul>
+				</nav>
+			</div>
+		<div class="burger-wrapper burger-not-visible">
+			<div class="burger">
+				@@include('blocks/button-cross.html', {
+				"class": "burger__close-btn btn-close",
+				"class-js": "btn-close-burger-js",
+				})
+				<nav class="burger__nav">
+					<ul class="burger-list">
+						<li class="burger-list__item item-home"><a class="burger-list__link link-home" href="./index.html">Home</a></li>
+						<li class="burger-list__item"><a class="burger-list__link" href="./my-blog.html">My blog</a></li>
+						<li class="burger-list__item"><a class="header-list__link" href="./profile.html">My profile</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		</header>
+		<main class="content">
+		<section class="section section-profile">
+			<div class="container container-profile">
+				<div class="content">
+					@@include('blocks/title-h1.html', {
+						"text": "My profile",
+						"class": "content__title",
+					})
+					<div class="content__inner">
+						<div class="burger__button-open">
+							<div class="line-one"></div>
+							<div class="line-two"></div>
+							<div class="line-three"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section section-data">
+			<div class="container container-data">
+				<picture class="avatar">
+					<img src="#" width="320" height="450" alt="avatar" class="j-profile-img">
+				</picture>
+				<div class="info">
+					<div class="info__string">
+						<p class="info__title">Name:</p>
+						<p class="indo__description j-profile-name"></p>
+					</div>
+					<div class="info__string">
+						<p class="info__title">Surname:</p>
+						<p class="indo__description j-profile-surname"></p>
+					</div>
+					<div class="info__string">
+						<p class="info__title">Email:</p>
+						<p class="indo__description j-profile-email"></p>
+					</div>
+					<div class="info__string">
+						<p class="info__title">Password</p>
+						<p class="indo__description"></p>
+					</div>
+					<div class="info__string">
+						<p class="info__title">Location:</p>
+						<p class="indo__description j-profile-location"></p>
+					</div>
+					<div class="info__string">
+						<p class="info__title">Age:</p>
+						<p class="indo__description j-profile-age"></p>
+					</div>
+					<div class="info__btn">
+						<button class="info__btn-password btn-change-password-js">Change password</button>
+						<button class="info__btn-data btn-change-data-js">Change other data</button>
+						<button class="info__btn-delete btn-delete-acc-js">Delete account</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		</main>
+		@@include('blocks/modal-change-password.html')
+		@@include('blocks/modal-edit-data.html')
+		@@include('blocks/preloader.html')
+	</div>
+	<script src="js/app.js" defer></script>
+	<script src="js/script.js"></script>
+	<script src="js/burger.js"></script>
+	<script src="js/popups.js"></script>
+	<script src="js/form-validation.js"></script>
+	<script src="js/profile.js"></script>
+	<script src="js/common.js"></script>
+</body>
+</html>
