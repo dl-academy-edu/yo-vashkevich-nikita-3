@@ -109,31 +109,37 @@ function getAll(form) {
 	const textareas = form.querySelectorAll('textarea');
 	let result = {}; //обект под результат
 
+	// for (let input of inputs) {
+	// 	switch (input.type) {
+	// 		case 'radio': {
+	// 			if(input.checked) {
+	// 				result[input.name] = input.value;//создаем ключ в резалт по инпут нейм и кладем значение нашего инпута  
+	// 			}
+	// 			break;
+	// 		}
+	// 		case 'checkbox': {
+	// 			if(!result[input.name]) result[input.name] = [];
+	// 			if(input.checked) result[input.name].push(input.value);
+	// 			break;
+	// 		}
+	// 		case 'file': {
+	// 			result[input.name] = input.files;
+	// 			break;
+	// 		}
+	// 		default: {
+	// 			result[input.name] = input.value;
+	// 		}
+	// 	}
+	// }
+
 	for (let input of inputs) {
-		switch (input.type) {
-			case 'radio': {
-				if(input.checked) {
-					result[input.name] = input.value;//создаем ключ в резалт по инпут нейм и кладем значение нашего инпута  
-				}
-				break;
-			}
-			case 'checkbox': {
-				if(!result[input.name]) result[input.name] = [];
-				if(input.checked) result[input.name].push(input.value);
-				break;
-			}
-			case 'file': {
-				result[input.name] = input.files;
-				break;
-			}
-			default: {
-				result[input.name] = input.value;
-			}
+		if (input.hasAttribute('required')) {
+			result[input.name] = input.value;
 		}
 	}
 
 
-	//вместо of in для объектов 
+	//проверка инпкутов на наличие атрибута required
 	for(let textarea of textareas) {
 		result[textarea.name] = textarea.value;
 	}
@@ -159,7 +165,7 @@ function isPhoneCorrect(phone) {
 	const form = document.forms.signIn;
 
 	if (!form) return;
-	console.log(signIn);
+	// console.log(signIn);
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault(); //ломаем стандартное повдеение событий 
@@ -210,7 +216,7 @@ function isPhoneCorrect(phone) {
 			// accepnt: userData.accepnt,
 			// avatar: userData.avatar,
 		};
-		console.log(data);
+		// console.log(data);
 
 	})
 })();
@@ -220,7 +226,7 @@ function isPhoneCorrect(phone) {
 	const form = document.forms.Register;
 
 	if (!form) return;
-	console.log(Register);
+	// console.log(Register);
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault(); //ломаем стандартное повдеение событий 
@@ -306,7 +312,7 @@ function isPhoneCorrect(phone) {
 	const form = document.forms.formMessage;
 
 	if (!form) return;
-	console.log(formMessage);
+	// console.log(formMessage);
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault(); //ломаем стандартное повдеение событий 
@@ -387,7 +393,7 @@ function isPhoneCorrect(phone) {
 	const form = document.forms.changePassword;
 
 	if (!form) return;
-	console.log(changePassword);
+	// console.log(changePassword);
 
 	form.addEventListener('submit', (e) => {
 		e.preventDefault(); //ломаем стандартное повдеение событий 
@@ -440,7 +446,7 @@ function isPhoneCorrect(phone) {
 			newPassword: userData.newPassword,
 			newPasswordRepeat: userData.newPasswordRepeat,
 		};
-		console.log(data);
+		// console.log(data);
 
 	})
 })();

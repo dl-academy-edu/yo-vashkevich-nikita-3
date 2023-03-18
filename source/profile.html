@@ -68,6 +68,10 @@
 			</div>
 		</section>
 		<section class="section section-data">
+			@@include('blocks/title-h2.html', {
+				"text": "Portfolio",
+				"class": "hidden",
+			})
 			<div class="container container-data">
 				<picture class="avatar">
 					<img src="#" width="320" height="450" alt="avatar" class="j-profile-img">
@@ -87,7 +91,7 @@
 					</div>
 					<div class="info__string">
 						<p class="info__title">Password</p>
-						<p class="indo__description"></p>
+						<p class="indo__description">****************</p>
 					</div>
 					<div class="info__string">
 						<p class="info__title">Location:</p>
@@ -117,5 +121,6 @@
 	<script src="js/form-validation.js"></script>
 	<script src="js/profile.js"></script>
 	<script src="js/common.js"></script>
+	<script src="js/edit-profile.js"></script>
 </body>
 </html>

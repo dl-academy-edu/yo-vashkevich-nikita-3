@@ -22,18 +22,17 @@
 			display: flex;
 			gap: 5px;
 			margin-bottom: 10px;
-			&--one {
+			&-el {
 			width: 30px;
 			height: 10px;
-			background: #F79824;
 			border-radius: 5px;
 			}
-			&--two {
-			width: 30px;
-			height: 10px;
-			background: #6A7FDB;;
-			border-radius: 5px;
-			}
+			// &--two {
+			// width: 30px;
+			// height: 10px;
+			// background: #6A7FDB;;
+			// border-radius: 5px;
+			// }
 		}
 		&-info {
 			display: flex;

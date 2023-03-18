@@ -1,6 +1,6 @@
 // console.log(window);
 const filterForm = document.forms.filterForm;
-console.log(filterForm);
+// console.log(filterForm);
 
 //проверяем наличие поикового запроса в нашем URL
 if (location.search) { 
@@ -13,11 +13,11 @@ if (location.search) {
 	//Перебор массива который создали выше 
 	for  (let stringParam of arrayStringParams) {
 		const param = stringParam.split('='); //создаем массив параметров с ключем и значением
-		console.log(param);
+		// console.log(param);
 		const nameParam = param[0]; //Получаем имя параметра
-		console.log(nameParam);
+		// console.log(nameParam);
 		const valueParam = param[1]; //Получаем значение парамантра ( значение)
-		console.log(valueParam);
+		// console.log(valueParam);
 		//Выполняем проверку на то что если мя параметра уже существует в оъекте парметром тогда добавляй масив в значение параметра, инче создаай свойство внутри объекта праметров, создай в нем масив положи в него значение параметра {phoneId: Array(2), howShow: Array(1)}
 		if (nameParam in params) {
 			params[nameParam].push(valueParam);
@@ -36,6 +36,8 @@ if (location.search) {
 			}
 		}
 	}
+
+	// updateInput(filterForm.tags, 'tags');
 
 	updateInput(filterForm.views, 'views');
 	updateInput(filterForm.comments, 'comments');
@@ -56,6 +58,9 @@ filterForm.addEventListener('submit', (e) => {
 			}
 		}
 	}
+
+	// addCheckedInput(e.target.tags, 'tags');
+
 
 	addCheckedInput(e.target.views, 'views');
 	addCheckedInput(e.target.comments, 'comments');

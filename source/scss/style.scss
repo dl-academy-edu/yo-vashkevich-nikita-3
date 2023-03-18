@@ -64,7 +64,7 @@
 	.header-container {
 		.header-list {
 			display: flex;
-			gap: 20px;
+			// gap: 20px;
 			padding: 33px 0px 32px 10px;
 			border-bottom: $color-gray 1px solid;
 			@media (max-width: 900px) {
@@ -78,6 +78,9 @@
 				margin-right: auto;
 			}
       
+      &__item:not(:first-child) {
+        margin-left: 20px;
+      }
       &__item {
         transition: 0.3s;
       }
@@ -633,7 +636,7 @@
         font-style: normal;
         font-weight: 700;
         font-size: 34px;
-        line-height: 41px;
+        line-height: 42px;
         text-align: center;
         color: $color-black;
       }
@@ -642,7 +645,7 @@
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
-        line-height: 21px;
+        line-height: 24px;
         text-align: center;
         color: $color-black;
 
@@ -652,7 +655,7 @@
       .progressbar {
         margin-top: 52px;
         display: flex;
-        margin-bottom: 60px;
+        margin-bottom: 58px;
         flex-wrap: wrap;
         column-gap: 25px;
         row-gap: 40px;
@@ -686,6 +689,9 @@
       flex-direction: column;
       gap: 50px;
       padding: 60px 0px 60px 0px;
+      &__title {
+        line-height: 42px;
+      }
 
       // .slider {
       //   height: 604px;
@@ -702,7 +708,7 @@
       //   }
       // }
       .slider-wrap {
-        margin-bottom: 60px;
+        // margin-bottom: 10px;
       }
     }
   }
@@ -829,6 +835,7 @@
       }
       fieldset {
         padding: 0;
+        margin: 0;
       }
       legend {
         font-family: 'Gilroy';
@@ -840,12 +847,458 @@
         margin-bottom: 10px;
       }
       &__tags {
-        display: flex;
-        overflow: auto;
+        // display: flex;
+        // overflow: auto;
         max-width: 116px;
         width: 116px;
         @media(max-width:1000px) {
           order: 5;
+        }
+        &-checkbox {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+        }
+        &-box {
+          max-height: 25px;
+          max-width: 25px;
+          input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+          }
+          //checkbox1
+          [for=tags-1] {
+            font-family: $font-gilroy;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: #2176FF;
+            transition: 0.3s;
+            transform: scale(1);
+          }
+          [for=tags-1]:hover {
+            transform: scale(1.05);
+          }
+          [for=tags-1]:active {
+            transform: scale(0.9);
+          }
+          [for=tags-1]:focus {
+            transform: scale(1);
+          }
+          [for=tags-1]:disabled {
+            transform: scale(1);
+          }
+          input:checked+[for=tags-1] {
+            color: #2176FF;
+          }
+          input+[for=tags-1] {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+          }
+          input+[for=tags-1]::before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 2.5px solid #2176FF;
+            border-radius: 5px;
+            margin-right: 12px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 60% 60%;
+            transition: 0.3s;
+          }
+          input:checked+[for=tags-1]::before {
+            background-image: url(../img/icon/check1.svg);
+          }
+          /* стили для активного состояния чекбокса (при нажатии на него) */
+          input:not(:disabled):active+[for=tags-1]::before {
+            transform: scale(0.9);
+          }
+          //
+          //checkbox2
+          [for=tags-2] {
+            font-family: $font-gilroy;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: #33A1FD;
+            transition: 0.3s;
+            transform: scale(1);
+          }
+          [for=tags-2]:hover {
+            transform: scale(1.05);
+          }
+          [for=tags-2]:active {
+            transform: scale(0.9);
+          }
+          [for=tags-2]:focus {
+            transform: scale(1);
+          }
+          [for=tags-2]:disabled {
+            transform: scale(1);
+          }
+          input:checked+[for=tags-2] {
+            color: #33A1FD;
+          }
+          input+[for=tags-2] {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+          }
+          input+[for=tags-2]::before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 2.5px solid #33A1FD;
+            border-radius: 5px;
+            margin-right: 12px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 60% 60%;
+            transition: 0.3s;
+          }
+          input:checked+[for=tags-2]::before {
+            background-image: url(../img/icon/check2.svg);
+          }
+          /* стили для активного состояния чекбокса (при нажатии на него) */
+          input:not(:disabled):active+[for=tags-2]::before {
+            transform: scale(0.9);
+          }
+          //
+          //checkbox3
+          [for=tags-3] {
+            font-family: $font-gilroy;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: #FDCA40;
+            transition: 0.3s;
+            transform: scale(1);
+          }
+          [for=tags-3]:hover {
+            transform: scale(1.05);
+          }
+          [for=tags-3]:active {
+            transform: scale(0.9);
+          }
+          [for=tags-3]:focus {
+            transform: scale(1);
+          }
+          [for=tags-3]:disabled {
+            transform: scale(1);
+          }
+          input:checked+[for=tags-3] {
+            color: #FDCA40;
+          }
+          input+[for=tags-3] {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+          }
+          input+[for=tags-3]::before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 2.5px solid #FDCA40;
+            border-radius: 5px;
+            margin-right: 12px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 60% 60%;
+            transition: 0.3s;
+          }
+          input:checked+[for=tags-3]::before {
+            background-image: url(../img/icon/check3.svg);
+          }
+          /* стили для активного состояния чекбокса (при нажатии на него) */
+          input:not(:disabled):active+[for=tags-3]::before {
+            transform: scale(0.9);
+          }
+          //
+          //checkbox5
+          [for=tags-4] {
+            font-family: $font-gilroy;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: #57E2E5;
+            transition: 0.3s;
+            transform: scale(1);
+          }
+          [for=tags-4]:hover {
+            transform: scale(1.05);
+          }
+          [for=tags-4]:active {
+            transform: scale(0.9);
+          }
+          [for=tags-4]:focus {
+            transform: scale(1);
+          }
+          [for=tags-4]:disabled {
+            transform: scale(1);
+          }
+          input:checked+[for=tags-4] {
+            color: #57E2E5;
+          }
+          input+[for=tags-4] {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+          }
+          input+[for=tags-4]::before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 2.5px solid #57E2E5;
+            border-radius: 5px;
+            margin-right: 12px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 60% 60%;
+            transition: 0.3s;
+          }
+          input:checked+[for=tags-4]::before {
+            background-image: url(../img/icon/check4.svg);
+          }
+          /* стили для активного состояния чекбокса (при нажатии на него) */
+          input:not(:disabled):active+[for=tags-4]::before {
+            transform: scale(0.9);
+          }
+          //
+          //checkbox5
+          [for=tags-5] {
+            font-family: $font-gilroy;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: #F79824;
+            transition: 0.3s;
+            transform: scale(1);
+          }
+          [for=tags-5]:hover {
+            transform: scale(1.05);
+          }
+          [for=tags-5]:active {
+            transform: scale(0.9);
+          }
+          [for=tags-5]:focus {
+            transform: scale(1);
+          }
+          [for=tags-5]:disabled {
+            transform: scale(1);
+          }
+          input:checked+[for=tags-5] {
+            color: #F79824;
+          }
+          input+[for=tags-5] {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+          }
+          input+[for=tags-5]::before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 2.5px solid #F79824;
+            border-radius: 5px;
+            margin-right: 12px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 60% 60%;
+            transition: 0.3s;
+          }
+          input:checked+[for=tags-5]::before {
+            background-image: url(../img/icon/check5.svg);
+          }
+          /* стили для активного состояния чекбокса (при нажатии на него) */
+          input:not(:disabled):active+[for=tags-5]::before {
+            transform: scale(0.9);
+          }
+          //
+          //checkbox6
+          [for=tags-6] {
+            font-family: $font-gilroy;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: #E08DAC;
+            transition: 0.3s;
+            transform: scale(1);
+          }
+          [for=tags-6]:hover {
+            transform: scale(1.05);
+          }
+          [for=tags-6]:active {
+            transform: scale(0.9);
+          }
+          [for=tags-6]:focus {
+            transform: scale(1);
+          }
+          [for=tags-6]:disabled {
+            transform: scale(1);
+          }
+          input:checked+[for=tags-6] {
+            color: #E08DAC;
+          }
+          input+[for=tags-6] {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+          }
+          input+[for=tags-6]::before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 2.5px solid #E08DAC;
+            border-radius: 5px;
+            margin-right: 12px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 60% 60%;
+            transition: 0.3s;
+          }
+          input:checked+[for=tags-6]::before {
+            background-image: url(../img/icon/check6.svg);
+          }
+          /* стили для активного состояния чекбокса (при нажатии на него) */
+          input:not(:disabled):active+[for=tags-6]::before {
+            transform: scale(0.9);
+          }
+          //
+          //checkbox7
+          [for=tags-7] {
+            font-family: $font-gilroy;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: #6A7FDB;
+            transition: 0.3s;
+            transform: scale(1);
+          }
+          [for=tags-7]:hover {
+            transform: scale(1.05);
+          }
+          [for=tags-7]:active {
+            transform: scale(0.9);
+          }
+          [for=tags-7]:focus {
+            transform: scale(1);
+          }
+          [for=tags-7]:disabled {
+            transform: scale(1);
+          }
+          input:checked+[for=tags-7] {
+            color: #6A7FDB;
+          }
+          input+[for=tags-7] {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+          }
+          input+[for=tags-7]::before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 2.5px solid #6A7FDB;
+            border-radius: 5px;
+            margin-right: 12px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 60% 60%;
+            transition: 0.3s;
+          }
+          input:checked+[for=tags-7]::before {
+            background-image: url(../img/icon/check7.svg);
+          }
+          /* стили для активного состояния чекбокса (при нажатии на него) */
+          input:not(:disabled):active+[for=tags-7]::before {
+            transform: scale(0.9);
+          }
+          //
+          //checkbox8
+          [for=tags-8] {
+            font-family: $font-gilroy;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            color: #45CB85;
+            transition: 0.3s;
+            transform: scale(1);
+          }
+          [for=tags-8]:hover {
+            transform: scale(1.05);
+          }
+          [for=tags-8]:active {
+            transform: scale(0.9);
+          }
+          [for=tags-8]:focus {
+            transform: scale(1);
+          }
+          [for=tags-8]:disabled {
+            transform: scale(1);
+          }
+          input:checked+[for=tags-8] {
+            color: #45CB85;
+          }
+          input+[for=tags-8] {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+          }
+          input+[for=tags-8]::before {
+            content: '';
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 2.5px solid #45CB85;
+            border-radius: 5px;
+            margin-right: 12px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 60% 60%;
+            transition: 0.3s;
+          }
+          input:checked+[for=tags-8]::before {
+            background-image: url(../img/icon/check8.svg);
+          }
+          /* стили для активного состояния чекбокса (при нажатии на него) */
+          input:not(:disabled):active+[for=tags-8]::before {
+            transform: scale(0.9);
+          }
+          //
         }
       }
       &__views {
@@ -1327,9 +1780,17 @@
       display: flex;
       gap: 8px;
         &__button {
+          font-family: $font-gilroy;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 22px;
           color: $color-gray;
           background-color: $color-white;
           transition: 0.3s;
+          &-active {
+            color: $color-black;
+          }
         }
         &__button:focus {
           color: $color-black;

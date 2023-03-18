@@ -52,7 +52,7 @@ function rerenderLink() {
 		.then(res => res.json())
 		.then(res => {
 			if(res.success) {
-				console.log('Вы успешно вошли!');
+				// console.log('Вы успешно вошли!');
 				console.log(res);
 				localStorage.setItem('token', res.data.token);
 				localStorage.setItem('userId', res.data.userId);
@@ -101,7 +101,7 @@ function rerenderLink() {
 //сообщения об отправке формы дял формы логина
 const modalLogin = document.querySelector('.modal-sign-in-js');
 const notifyLogin = modalLogin.querySelector('.message-modal-js');
-console.log(notifyLogin);
+// console.log(notifyLogin);
 const btnCloseNotifyLogin = modalLogin.querySelector('.btn-close-notify-modal-js');
 const notifyMess = modalLogin.querySelector('.message');
 

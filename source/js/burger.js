@@ -11,9 +11,11 @@
 
 	function burgerOpen() {
 		menuBurger.classList.remove('burger-not-visible');
+		noScroll();
 	}
 
 	function burgerClose() {
 		menuBurger.classList.add('burger-not-visible');
+		returnScroll();
 	}
 })();

@@ -30,7 +30,7 @@
 
 	//функция скролла 
 	function scrollUp() {
-		console.log('scrollUp');
+		// console.log('scrollUp');
 		closeModal()
 		window.scrollTo({
 			top: 0,
