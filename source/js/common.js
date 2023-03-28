@@ -1,4 +1,5 @@
-const BASE_SERVER_PATH = 'http://academy.directlinedev.com';
+// const BASE_SERVER_PATH = 'http://academy.directlinedev.com';
+const BASE_SERVER_PATH = 'https://academy.directlinedev.com';
 
 function interactionModal(modal) {
 	modal.classList.toggle('display-none-js');

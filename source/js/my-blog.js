@@ -1,4 +1,5 @@
-const SERVER_URL = 'http://academy.directlinedev.com';
+// const SERVER_URL = 'http://academy.directlinedev.com';
+const SERVER_URL = 'https://academy.directlinedev.com';
 const mainLoader = document.querySelector('.loader-js');
 
 //loader
@@ -92,6 +93,9 @@ function getData(params) {
 				text: post.text,
 				src: post.photo.desktopPhotoUrl,
 				tags: post.tags,
+				views: post.views,
+				commentsCount: post.commentsCount,
+				date: post.date,
 			});
 		})
 		resultContainer.innerHTML = dataPosts;
@@ -178,7 +182,7 @@ function linkElementCreate(page) {
 	return link;
 }
 
-function cardCreate({title, text, src, tags}) {
+function cardCreate({title, text, src, tags, views, commentsCount, date}) {
 	return `
 	<div class="">
 		<div class="post">
@@ -190,9 +194,9 @@ function cardCreate({title, text, src, tags}) {
 					${tags.map(tag => `<div class="post__content-color-el" style="background-color: ${tag.color}"></div>`).join('<br>')}
 				</div>
 				<div class="post__content-info">
-					<p class="post__content-info--date">20.01.2020</p>
-					<p class="post__content-info--views">223 views</p>
-					<p class="post__content-info--comments">97 comments</p>
+					<p class="post__content-info--date">${date}</p>
+					<p class="post__content-info--views">${views} views</p>
+					<p class="post__content-info--comments">${commentsCount} comments</p>
 				</div>
 				<h5 class="post__content-title card-title">${title}</h5>
 				<p class="post__content-description card-text"></-p>${text}</p>

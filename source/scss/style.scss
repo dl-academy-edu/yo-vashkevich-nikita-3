@@ -318,16 +318,99 @@
                 max-height: 1497px;
                 width: 100%;
                 height: 100%;
-                transform: translateY(-210px);
-                @media (max-width:1300px) {
-                  transform: translateY(-133px);
+                &-one {
+                  transform: translateY(-580px);
+                  @media (max-width:1300px) {
+                    transform: translateY(-520px);
+                  }
+                  @media (max-width:1200px) {
+                    transform: translateY(-420px);
+                  }
+                  @media (max-width:950px) {
+                    transform: translateY(-320px);
+                  }
+                  @media (max-width:768px) {
+                    transform: translateY(-200px);
+                  }
+                  @media (max-width:550px) {
+                    transform: translateY(-110px);
+                  }
+                  @media (max-width:450px) {
+                    transform: translateY(0px);
+                  }
                 }
-                @media (max-width:768px) {
-                  transform: translateY(-100px);
+                &-two {
+                  transform: translateY(-380px);
+                  @media (max-width:1300px) {
+                    transform: translateY(-320px);
+                  }
+                  @media (max-width:1200px) {
+                    transform: translateY(-300px);
+                  }
+                  @media (max-width:950px) {
+                    transform: translateY(-220px);
+                  }
+                  @media (max-width:768px) {
+                    transform: translateY(-200px);
+                  }
+                  @media (max-width:550px) {
+                    transform: translateY(-110px);
+                  }
+                  @media (max-width:450px) {
+                    transform: translateY(0px);
+                  }
+                  // @media (max-width:320px) {
+                  //   max-height: 420px;
+                  // }
                 }
-                @media (max-width:550px) {
-                  transform: translateY(0px);
+                &-three {
+                  transform: translateY(-580px);
+                  @media (max-width:1300px) {
+                    transform: translateY(-520px);
+                  }
+                  @media (max-width:1200px) {
+                    transform: translateY(-420px);
+                  }
+                  @media (max-width:950px) {
+                    transform: translateY(-320px);
+                  }
+                  @media (max-width:768px) {
+                    transform: translateY(-200px);
+                  }
+                  @media (max-width:550px) {
+                    transform: translateY(-110px);
+                  }
+                  @media (max-width:450px) {
+                    transform: translateY(0px);
+                  }
                 }
+                &-four {
+                  transform: translateY(-580px);
+                  @media (max-width:1300px) {
+                    transform: translateY(-560px);
+                  }
+                  @media (max-width:950px) {
+                    transform: translateY(-420px);
+                  }
+                  @media (max-width:768px) {
+                    transform: translateY(-300px);
+                  }
+                  @media (max-width:550px) {
+                    transform: translateY(0px);
+                  }
+                }
+                // &-two {
+                //   transform: translateY(-210px);
+                //   @media (max-width:1300px) {
+                //     transform: translateY(-133px);
+                //   }
+                //   @media (max-width:768px) {
+                //     transform: translateY(-100px);
+                //   }
+                //   @media (max-width:550px) {
+                //     transform: translateY(0px);
+                //   }
+                // }
               }
           }
         }
