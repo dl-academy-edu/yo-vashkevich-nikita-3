@@ -1,0 +1,32 @@
+<section class="section-sign-in modal-sign-in-js display-none-js">
+	@@include('blocks/title-h2.html', {
+	"text": "Sign in",
+	"class": "u-visuallyhidden",
+	})
+	<div class="form-wrapper">
+		<div class="form-inner-wrapper">
+			<form class="form" action="#" name="signIn" id="add-form" novalidate>
+				<div class="form__email error-js">
+					<label class="form__email-label error-label" for="email">Email<span class="red"> *</span></label>
+					<input class="form__emeil-input req-js email-js error-js" type="email" id="email" name="email" required>
+					<!-- <span class="error"></span> -->
+				</div>
+				<div class="form__password error-js">
+					<label class="form__password-label error-label" for="password">Password<span class="red"> *</span></label>
+					<input class="form__password-input req-js error-js" type="password" id="password" name="password" required>
+				</div>
+				@@include('blocks/button.html', {
+					"text": "Login",
+					"type": "submit",
+					"class": "form__button",
+					"class-mode": "",
+				})
+			</form>
+			@@include('blocks/button-cross.html', {
+				"class": "btn-close",
+				"class-js": "btn-close-sign-js",
+			})
+		</div>
+	</div>
+@@include('blocks/message-modal.html')
+</section>

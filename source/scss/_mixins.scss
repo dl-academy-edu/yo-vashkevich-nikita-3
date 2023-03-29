@@ -1,0 +1,139 @@
+// @mixin no-list {
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+// }
+//
+// @mixin no-btn {
+//   background: transparent;
+//   border: 0;
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+//   text-decoration: none;
+// }
+//
+// @mixin clearfix {
+//   &::after {
+//     content: "";
+//     clear: both;
+//     display: table;
+//   }
+// }
+
+///FONT MIXIN
+$maxWidth: 1440;
+
+@mixin  font-desktop-pad($pcSize, $padSize) {
+	$addSize: $pcSize - $padSize;
+	$addPadSize: $addSize + $addSize * 0.7;
+	@media (max-width: 1440px) {
+		font-size: calc(#{$padSize + px} + #{$addPadSize} * ((100vw - 768px) / #{$maxWidth}));
+	}
+}
+
+$padWidth: 768;
+
+@mixin  font-pad-mobile($padSize, $mobSize) {
+	$addSize: $padSize - $mobSize;
+	$addMobSize: $addSize + $addSize * 0.7;
+	@media (max-width: 767px) {
+		font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$padWidth}));
+	}
+}
+//font-size: calc(36px + (4 + 4*0.7) * ((100vw - 375px) / 768));
+
+
+///MARGIN 0 0 MIXIN FOR CONTAINERS
+$maxWidth: 1440;
+@mixin  margin-desktop-pad($pcSize, $padSize) {
+	$addSize: $pcSize - $padSize;
+	$addPadSize: $addSize + $addSize * 0.7;
+	@media (max-width: 1300px) {
+		margin: 0 calc(#{$padSize + px} + #{$addPadSize} * ((100vw - 768px) / #{$maxWidth}));
+	}
+
+}
+
+$padWidth: 768;
+
+@mixin  margin-pad-mobile($padSize, $mobSize) {
+	$addSize: $padSize - $mobSize;
+	$addMobSize: $addSize + $addSize * 0.7;
+	@media (max-width: 767px) {
+		margin: 0 calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$padWidth}));
+	}
+}
+
+
+
+
+
+
+///WIDTH
+$maxWidth: 1440;
+@mixin  width-desktop-pad($pcSize, $padSize) {
+	$addSize: $pcSize - $padSize;
+	$addPadSize: $addSize + $addSize * 0.7;
+	@media (max-width: 1300px) {
+		width: calc(#{$padSize + px} + #{$addPadSize} * ((100vw - 768px) / #{$maxWidth}));
+	}
+
+}
+
+$padWidth: 768;
+
+@mixin  width-pad-mobile($padSize, $mobSize) {
+	$addSize: $padSize - $mobSize;
+	$addMobSize: $addSize + $addSize * 0.7;
+	@media (max-width: 767px) {
+		width: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$padWidth}));
+	}
+}
+
+///HEIGHT
+$maxWidth: 1440;
+@mixin  height-desktop-pad($pcSize, $padSize) {
+	$addSize: $pcSize - $padSize;
+	$addPadSize: $addSize + $addSize * 0.7;
+	@media (max-width: 1300px) {
+		height: calc(#{$padSize + px} + #{$addPadSize} * ((100vw - 768px) / #{$maxWidth}));
+	}
+
+}
+
+$padWidth: 768;
+
+@mixin  height-pad-mobile($padSize, $mobSize) {
+	$addSize: $padSize - $mobSize;
+	$addMobSize: $addSize + $addSize * 0.7;
+	@media (max-width: 767px) {
+		height: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$padWidth}));
+	}
+}
+
+
+@mixin button {
+	border: 2.5px solid $color-black;
+	border-radius: 30px;
+	font-family: 'Gilroy';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 22px;
+	text-align: center;
+	color: $color-black;
+	background-color: #FFFFFF;
+	padding: 10px 19px;
+	transition: 0.3s;
+	&:hover {
+		background-color: $color-black;
+		color: $color-white;
+		transform: scale(1.1);
+	}
+	&:active {
+		background-color: $color-black;
+		color: $color-white;
+		transform: scale(0.9);
+	}
+}

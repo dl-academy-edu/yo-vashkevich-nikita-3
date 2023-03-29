@@ -1,0 +1,51 @@
+<section class="section-edit-data modal-edit-data-js display-none-js j-modal-editing">
+	@@include('blocks/title-h2.html', {
+	"text": "Sign in",
+	"class": "u-visuallyhidden",
+	})
+	<div class="wrapper">
+		<div class="wrapper__form">
+			<form class="form" name="editData" novalidate>
+				<div class="form__email">
+					<label class="form__label" for="mail">Email</span></label>
+					<input class="form__input" type="text" id="mail" name="mail">
+				</div>
+				<div class="form__inline">
+					<div class="form__name">
+						<label class="form__label" for="name">Name</span></label>
+						<input class="form__input" type="text" id="name" name="name">
+					</div>
+					<div class="form__surname">
+						<label class="form__label" for="surname">Surname</span></label>
+						<input class="form__input" type="text" id="surname" name="surname">
+					</div>
+				</div>
+				<div class="form__inline">
+					<div class="form__location">
+						<label class="form__label" for="location">Location</span></label>
+						<input class="form__input" type="text" id="location" name="location">
+					</div>
+					<div class="form__age">
+						<label class="form__label" for="age">Age</label>
+						<input class="form__input" type="text" id="age" name="age">
+					</div>
+				</div>
+				<div class="form__picture">
+					<p class="form__label">Profile picture</p>
+					<label class="form__label" for="addPicture"></label>
+					<input class="form__input" type="file" id="addPicture" name="addPicture">
+				</div>
+					@@include('blocks/button.html', {
+						"text": "Submit changes",
+						"type": "submit",
+						"class": "form__button",
+						"class-mode": "button-submit",
+					})
+			</form>
+			@@include('blocks/button-cross.html', {
+				"class": "btn-close",
+				"class-js": "btn-close-data-js",
+			})
+		</div>
+	</div>
+</section>

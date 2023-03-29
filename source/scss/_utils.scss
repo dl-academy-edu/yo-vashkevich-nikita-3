@@ -1,0 +1,37 @@
+.u-svg-wrapper {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.u-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.u-invisible {
+  visibility: hidden;
+}
+
+.visually-none {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.display-none-js {
+	display: none;
+}
+
+.open-js {
+	display: block;
+}

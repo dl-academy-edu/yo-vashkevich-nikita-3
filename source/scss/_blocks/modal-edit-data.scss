@@ -1,0 +1,222 @@
+.section-edit-data {
+	position:fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $color-background-section;
+	z-index: 120;
+	@media (max-width:500px) {
+		background-color: $color-white;
+	}
+	.wrapper {
+		display: flex;
+		&__form {
+			display: flex;
+			gap: 10px;
+			margin: 0 auto;
+			margin-top: 117px;
+			padding-left: 34px;
+			@media (max-width:800px) {
+				flex-direction: column;
+				padding-left: 0px;
+			}
+			@media (max-width:570px) {
+				margin-top: 20px;
+			}
+			@media (max-width:500px) {
+				padding-left: 0px;
+			}
+		}
+		.form {
+			display: flex;
+			flex-direction: column;
+			width: 680px;
+			@media (max-width:800px) {
+				order: 1;
+			}
+			@media (max-width:767px) {
+				max-width: 500px;
+			}
+			@media (max-width:570px) {
+				max-width: 400px;
+			}
+			@media (max-width:500px) {
+				max-width: 500px;
+			}
+
+			&__inline {
+				display: flex;
+				gap: 20px;
+				@media (max-width:570px) {
+					flex-direction: column;
+					gap: 10px;
+				}
+			}
+			
+			&__email {
+				display: flex;
+				flex-direction: column;
+				max-width: 600px;
+				@media (max-width:570px) {
+					width: auto;
+				}
+				@media (max-width:500px) {
+					max-width: 290px;
+				}
+				@media (max-width:350px) {
+					max-width: 280px;
+				}
+				@media (max-width:319px) {
+					max-width: 250px;
+				}
+				@media (max-width:290px) {
+					max-width: 180px;
+				}
+			}
+			&__name, &__surname {
+				display: flex;
+				flex-direction: column;
+				width: 290px;
+				margin-top: 18px;
+				@media (max-width:570px) {
+					width: auto;
+				}
+				@media (max-width:500px) {
+					max-width: 290px;
+				}
+				@media (max-width:350px) {
+					max-width: 280px;
+				}
+				@media (max-width:319px) {
+					max-width: 250px;
+				}
+				@media (max-width:290px) {
+					max-width: 180px;
+				}
+			}
+			&__location, &__age {
+				display: flex;
+				flex-direction: column;
+				width: 290px;
+				margin-top: 18px;
+				@media (max-width:570px) {
+					width: auto;
+				}
+				@media (max-width:500px) {
+					max-width: 290px;
+				}
+				@media (max-width:350px) {
+					max-width: 280px;
+				}
+				@media (max-width:319px) {
+					max-width: 250px;
+				}
+				@media (max-width:290px) {
+					max-width: 180px;
+				}
+			}
+			&__label {
+				margin-bottom: 6px;
+			}
+			&__picture {
+				display: flex;
+				flex-direction: column;
+				padding-top: 20px;
+				// max-width: 290px;
+				@media (max-width:570px) {
+					width: auto;
+				}
+				@media (max-width:500px) {
+					max-width: 290px;
+				}
+				@media (max-width:350px) {
+					max-width: 280px;
+				}
+				@media (max-width:319px) {
+					max-width: 250px;
+				}
+				@media (max-width:290px) {
+					max-width: 180px;
+				}
+				input[type="file"] {
+					height: 0;
+					padding: 0;
+					opacity: 0;
+					color: $color-black;
+				}
+				label[for="addPicture"] {
+					font-family: $color-black;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 18px;
+					line-height: 21px;
+					color: $color-black;
+					text-align: center;
+
+					display: flex;
+					align-items: center;
+					padding-left: 40px;
+					border: 2.5px solid $color-not-available;
+					width: 290px;
+					height: 50px;
+					background-image: url(../../img/icon/file-upload.svg);
+					background-size: 15% 40%;
+					background-repeat: no-repeat;
+					background-position-y: center;
+				}
+				label[for="addPicture"]:hover {
+					border-color: $color-black;
+				}
+				label[for="addPicture"]:focus {
+					border-color: $color-black;
+				}
+			}
+			button {
+				border: 2.5px solid $color-black;
+				border-radius: 30px;
+				font-family: 'Gilroy';
+				font-style: normal;
+				font-weight: 700;
+				font-size: 18px;
+				line-height: 22px;
+				text-align: center;
+				color: $color-black;
+				padding: 10px 19px;
+				max-width: 180px;
+				margin-top: 20px;
+				background-color: #FFFFFF;
+				transition: 0.3s;
+			}
+			button:hover {
+				border: 2.5px solid $color-gray;
+				color: $color-gray;
+				transform: scale(1.1);
+			}
+			button:active {
+				background-color: $color-black;
+				color: $color-white;
+				transform: scale(0.9);
+			}
+			button:disabled {
+				border: 2.5px solid $color-not-available;
+				color: $color-not-available;
+			}
+			button:disabled:hover {
+				border: 2.5px solid $color-not-available;
+				color: $color-not-available;
+				background-color: $color-white;
+				transform: scale(1);
+			}
+		}
+		.btn-close {
+			@media(max-width: 800px) {
+				margin-left: auto;
+				order: 0;
+			}
+			@media(max-width: 500px) {
+				margin-left: 20px;
+			}
+		}
+	}
+}
